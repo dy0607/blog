@@ -1,3 +1,7 @@
 baseurl: /dy0607.github.io
 
+name: Dy's Blog
+
+description: a OIer from Yali
+
 theme: jekyll-theme-architect
