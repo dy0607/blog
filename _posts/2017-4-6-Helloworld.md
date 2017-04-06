@@ -1,10 +1,12 @@
 ---
 layout: default
 title: Hello, World!
+tag: Other
 ---
 This is my first blog.
 $a + b$ Problem.
-```C++
+
+```
 #include <iostream>
 
 int main(){

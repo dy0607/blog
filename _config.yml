@@ -1,7 +1,7 @@
 baseurl: /dy0607.github.io
 
-name: Dy's Blog
-
+name: Dy's Home
+title: Dy's Home
 description: a OIer from Yali
 
 theme: jekyll-theme-modernist
