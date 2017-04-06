@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: post
 title: Hello, World!
-tag: Other
+tag: [Other]
 ---
 This is my first blog.
 $a + b$ Problem.

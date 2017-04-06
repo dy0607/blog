@@ -1,60 +1,218 @@
-<!doctype html>
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Dy's Home by </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dy's Home</title>
 
-    <link href='https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/dy0607.github.io/assets/css/style.css?v=">
-    <script src="/dy0607.github.io/assets/js/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- Bootstrap CSS -->
+<link href="http://localhost:4000/dy0607.github.io/css/bootstrap.min.css" rel='stylesheet' type='text/css'/>
+<link href="http://localhost:4000/dy0607.github.io/css/simple-sidebar.css" rel='stylesheet' type='text/css'/>
+<link href="http://localhost:4000/dy0607.github.io/css/font-awesome.min.css" rel='stylesheet' type='text/css'/>
+<link href="http://localhost:4000/dy0607.github.io/css/global.css" rel='stylesheet' type='text/css'/>
+<link href="http://localhost:4000/dy0607.github.io/css/footer.css" rel='stylesheet' type='text/css'/>
 
-	<!--For Mathjax-->
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-    });
-    </script>
-	<script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>	
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header >
-        <h1>Dy's Home</h1>
+    <link href="http://localhost:4000/dy0607.github.io/css/head.css" rel='stylesheet' type="text/css"/>
+    <link href="http://localhost:4000/dy0607.github.io/css/archives.css" rel='stylesheet' type="text/css"/>
+
+</head>
+<body>
+
+    <div id="wrapper" >
+
         
-          <p>a OIer from Yali</p>
-        
-        <p class="view"><a href="">View the Project on GitHub <small></small></a></p>
-        <ul>
-        
-          <li><a href="">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
+<!-- Toggle Button -->
+ <a href="#menu-toggle" class="btn btn-outline-link hidden-xs-down" id="menu-toggle">
+     <i class="fa fa-bars" aria-hidden="true"></i>
+ </a>
 
-      <h2>Posts</h2>
-<ul>
-
-<li>06 Apr 2017 <a href="/dy0607.github.io/2017/04/06/Helloworld.html">Hello, World!</a></li>
-
+ <!-- Sidebar for desktop -->
+ <div id="sidebar-wrapper" class="hidden-xs-down">
+    <nav class="nav nav-pills flex-sm-row p-3 justify-content-center">
+        <a class="flex-sm-fill text-sm-center nav-link active" href="#sidebar-home-content" data-toggle="tab" role="tab" id="home">Home</a>
+        <a class="flex-sm-fill text-sm-center nav-link hidden-xl-down" href="#sidebar-toc-content" data-toggle="tab" role="tab" id="toc">Toc</a>
+    </nav>
+    <div class="tab-content" id=tab-content>
+        <div class="tab-pane text-sm-center active" id="sidebar-home-content">
+            <img class="site-author-image m-2" itemprop="image" src=" http://comic.szhshp.org/comic/10101/headshot/0 (2).png">
+            <div class="text-warning">Szhshp</div>
+            <ul class="sidebar-nav">
+    <li title="Home">
+        <a href="http://localhost:4000/dy0607.github.io/index.html">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            Home  
+        </a>
+    </li>
+    <li title="archives">
+        <a href="http://localhost:4000/dy0607.github.io/index.html#archives">
+            <i class="fa fa-file-archive-o" aria-hidden="true"></i>
+            Archives  
+            <span class="badge badge-primary">2</span>
+        </a>
+    </li>
+    <li title="categories">
+        <a href="http://localhost:4000/dy0607.github.io/categories.html">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            Categories 
+            <span class="badge badge-primary">1</span>
+        </a>
+    </li>
+    <li title="留言板">
+        <a href="http://localhost:4000/dy0607.github.io/about.html" >
+            <i class="fa fa-comments" aria-hidden="true"></i>
+            Messager
+        </a>
+    </li>
 </ul>
-
-
-      </section>
+        </div>
+        <div class="tab-pane fade text-sm-left" id="sidebar-toc-content">
+        </div>
     </div>
-    <footer>
-    
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+</div>
 
-    
-  </body>
+<!-- Navbar for xsmall screen  -->
+<div class="hidden-sm-up">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Dy's Home</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="sidebar-nav">
+    <li title="Home">
+        <a href="http://localhost:4000/dy0607.github.io/index.html">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            Home  
+        </a>
+    </li>
+    <li title="archives">
+        <a href="http://localhost:4000/dy0607.github.io/index.html#archives">
+            <i class="fa fa-file-archive-o" aria-hidden="true"></i>
+            Archives  
+            <span class="badge badge-primary">2</span>
+        </a>
+    </li>
+    <li title="categories">
+        <a href="http://localhost:4000/dy0607.github.io/categories.html">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            Categories 
+            <span class="badge badge-primary">1</span>
+        </a>
+    </li>
+    <li title="留言板">
+        <a href="http://localhost:4000/dy0607.github.io/about.html" >
+            <i class="fa fa-comments" aria-hidden="true"></i>
+            Messager
+        </a>
+    </li>
+</ul>
+        </div>
+    </nav>
+</div>
+       <div class="jumbotron" id="jumbotron" style="background: url(http://localhost:4000/dy0607.github.io/img/bg.jpg) no-repeat center center scroll;">
+    <p class="display-4 pt-5 text-center text-info">Project Gaia</p>
+    <p class="text-white text-center" >Jekyll theme by <a href="http://szhshp.org">Szhshp</a></p>
+    <p class="text-white text-center" >Powered by Jeklly, Bootstrap 4, JQuery 3</p>
+    <p class="text-white text-center" >Github: <a href="https://github.com/szhielelp/JekyllTheme-ProjectGaia">Project Gaia</a></p>
+</div>
+         <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="page-header" id="archives">
+                            <h3>Archives</h3>
+                        </div>
+
+                        <ul class="ant-timeline" id="archivelist">
+
+
+                            
+                            
+
+                            
+                            
+
+                            
+
+
+                            <li class="ant-timeline-item">
+                                <div class="ant-timeline-item-content">
+                                    <span class="text-danger">2017-02-05 </span>
+                                    <div class="d-flex align-items-center post-title">
+                                     <a class="post-link text-danger h6 text-danger" href="http://localhost:4000/dy0607.github.io/intro/2017/02/05/helloworld.html">Jekyll Theme - Project Gaia</a>
+                                    </div>
+                                </div>
+                            </li>
+                            
+
+
+                            
+                            
+
+                            
+                            
+
+                            <li class="ant-timeline-item">
+                                <div class="ant-timeline-item-content">
+                                    <span class="text-primary">2017-04-06 </span>
+                                    <div class="d-flex align-items-center post-title">
+                                        <a class="post-link h6 text-primary" href="http://localhost:4000/dy0607.github.io/2017/04/06/Helloworld.html">Hello, World!</a>
+                                     </div>
+                                </div>
+                            </li>
+                            
+
+                            
+                            
+                            
+                        </ul>
+                    </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+       <footer class="mt-5 pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <strong>Credits</strong>
+        <table class="table table-sm">
+          <tr>
+            <td>Theme by:</td>
+            <td><a href="szhshp.org">Szhshp</a></td>
+          </tr>
+          <tr>
+            <td>Engine:</td>
+            <td>Ruby x Jekyll</td>
+          </tr>
+          </table>
+          <p class="text-muted">Copyright &copy; dy0607 2017</p>
+        </div>
+
+        <div class="col-md-6">
+          <strong>Friend Links</strong>
+          <table class="table table-sm">
+            <tr>
+              <td><a href="http://blog.csdn.net/frods"> SAK</a></td>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+    </div>  
+  </footer>
+
+
+    </div>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="http://localhost:4000/dy0607.github.io/js/jquery-3.1.1.min.js"></script>
+<script src="http://localhost:4000/dy0607.github.io/js/tether.min.js"></script>
+<script src="http://localhost:4000/dy0607.github.io/js/bootstrap.min.js"></script>
+
+    <script src="http://localhost:4000/dy0607.github.io/js/sidebar.js"></script>
+
+</body>
 </html>
+
