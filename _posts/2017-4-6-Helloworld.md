@@ -2,15 +2,15 @@
 layout: post
 title: Hello, World!
 tag: [Other]
+stickie: true
 ---
 This is my first blog.
 $a + b$ Problem.
 
-```
-#include <iostream>
-
+<pre class="brush: c++">
+#include <cstdio>
 int main(){
-	std::cout << "Hello, World!" << std::endl;
+	printf("Hello World!");
 	return 0;
 }
-```
+</pre>
