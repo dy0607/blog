@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Hello, World!
-tag: [Other]
+tag: [其它]
+category: [杂项]
 stickie: true
 ---
 This is my first blog.
