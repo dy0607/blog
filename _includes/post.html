@@ -7,14 +7,14 @@
                     <h1 class="text-danger">
                         {{ page.title }}
                     </h1></p>
-                    <B>Date: {{ page.date | date: "%Y-%m-%d" }}</B></p>
-                    <B>Tag: {{ page.tag }}</B></p>
+                    <B><i>Date: {{ page.date | date: "%Y-%m-%d" }}</i></B></p>
+                    <B><i>Tag: {{ page.tag }}</i></B></p>
                 </div>
                 {{ page.content | markdownify }}
                 </p></p>
 
                 <!-- don't delete this div as this is header collapse end identified  -->
-                <div id="content-end"><h1>Comment Box</h1></div>
+                <div id="content-end"></div>
                 <div></div>
             </div>
 
