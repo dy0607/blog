@@ -1,7 +1,8 @@
 <!-- Page Content -->
 <div id="page-content-wrapper">
     <div class="container-fluid" id="post-content">
-        <div class="row">
+        <div class="row">		   
+	   		<div style="margin:0px auto; width:70%; line-height:26px; overflow:hidden;">
             <div class="col-md-12">
                 <div class="page-header">
                     <h1 class="text-danger">
@@ -10,7 +11,7 @@
                     <B><i>Date: {{ page.date | date: "%Y-%m-%d" }}</i></B></p>
                     <B><i>Tag: </i></B>
                     {% for Tag in page.tag %}
-                    	<B><i>{{ Tag }}</i></B>
+                    	<span class="badge badge-primary">{{ Tag }}  </span>
                     {% endfor %}
                     </p>
                 </div>
@@ -20,6 +21,7 @@
                 <!-- don't delete this div as this is header collapse end identified  -->
                 <div id="content-end"></div>
                 <div></div>
+                </div>
             </div>
 
         </div>

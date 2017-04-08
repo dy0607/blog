@@ -1,5 +1,6 @@
   <!-- Page Content -->
         <div id="page-content-wrapper">
+        	<div style="margin:0px auto; width:70%; line-height:26px; overflow:hidden;">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
@@ -40,16 +41,24 @@
 
                             <li class="ant-timeline-item">
                                 <div class="ant-timeline-item-content">
+                                	<span class="badge badge-danger">{{ post.date | date: "%Y-%m-%d" }}</span>
                                 	<div class="d-flex align-items-center post-title">
                                         <a class="post-link h5 text-primary" href="{{site.url}}{{site.baseurl}}{{ post.url}}">{{ post.title }}</a>
                                     </div>
-                                    <span class="text-primary">{{ post.date | date: "%Y-%m-%d" }} </span>
-                                    <p>{{ post.intro }} </p>
+                                    
+									<p>{{ post.intro }} </p>
+                                    <B><i>Tag:  </i></B>
+                                    {% for Tag in post.tag %}
+                    					<span class="badge badge-primary">{{ Tag }}  </span>
+                    				{% endfor %}
+                    				</p>
+                                    
                                 </div>
                             </li>
                             {% endfor %}
                         </ul>
                     </div>
+            </div>
             </div>
         </div>
         <!-- /#page-content-wrapper -->
