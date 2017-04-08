@@ -3,15 +3,20 @@ layout: post
 title: Hello, World!
 tag: [其它]
 category: [杂项]
-stickie: true
+intro: Hello, World!
 ---
-This is my first blog.
-$a + b$ Problem.
+
+第一篇博客.
+
+测试一下代码高亮和MathJex.
+
+Here is $a + b$ Problem.
 
 <pre class="brush: c++">
 #include &lt;cstdio>
 int main(){
-	printf("Hello World!");
+	scanf("%d%d", &a, &b);
+	printf("%d", a + b);
 	return 0;
 }
 </pre>
