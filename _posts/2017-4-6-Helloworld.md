@@ -11,12 +11,10 @@ intro: Hello, World!
 测试一下代码高亮和MathJex.
 
 Here is $a + b$ Problem.
-
-<pre class="brush: c++">
-#include &lt;cstdio>
+<pre><code class="c++">#include &lt;cstdio>
 int main(){
 	scanf("%d%d", &a, &b);
 	printf("%d", a + b);
 	return 0;
 }
-</pre>
+</code></pre>
