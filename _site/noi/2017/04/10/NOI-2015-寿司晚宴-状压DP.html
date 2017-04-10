@@ -138,266 +138,110 @@
             <div class="col-md-12">
                 <div class="page-header">
                     <h1 class="text-danger">
-                        SCOI 2012 喵星球上的点名 后缀数组+莫队
+                        NOI 2015 寿司晚宴 状压DP
                     </h1></p>
-                    <B><i>Date: 2017-04-08</i></B></p>
+                    <B><i>Date: 2017-04-10</i></B></p>
                     <B><i>Tag: </i></B>
                     
-                    	<span class="badge badge-primary">后缀数组  </span>
-                    
-                    	<span class="badge badge-primary">莫队  </span>
+                    	<span class="badge badge-primary">DP  </span>
                     
                     </p>
                 </div>
                 <h2 id="description">Description</h2>
 
-<p>a180285幸运地被选做了地球到喵星球的留学生。他发现喵星人在上课前的点名现象非常有趣。 假设课堂上有N个喵星人，每个喵星人的名字由姓和名构成。喵星球上的老师会选择M个串来点名，每次读出一个串的时候，如果这个串是一个喵星人的姓或名的子串，那么这个喵星人就必须答到。 然而，由于喵星人的字码过于古怪，以至于不能用ASCII码来表示。为了方便描述，a180285决定用数串来表示喵星人的名字。</p>
+<p>为了庆祝 NOI 的成功开幕，主办方为大家准备了一场寿司晚宴。小 G 和小 W 作为参加 NOI 的选手，也被邀请参加了寿司晚宴。</p>
 
-<p>现在你能帮助a180285统计每次点名的时候有多少喵星人答到，以及M次点名结束后每个喵星人答到多少次吗？</p>
+<p>在晚宴上,主办方为大家提供了 $n−1$ 种不同的寿司，编号 $1,2,3,…,n−1$，其中第 $i$ 种寿司的美味度为 $i+1$ （即寿司的美味度为从 $2$ 到 $n$）。</p>
+
+<p>现在小 G 和小 W 希望每人选一些寿司种类来品尝，他们规定一种品尝方案为不和谐的当且仅当：小 G 品尝的寿司种类中存在一种美味度为 $x$ 的寿司，小 W 品尝的寿司中存在一种美味度为 $y$ 的寿司，而 $x$ 与 $y$ 不互质。</p>
+
+<p>现在小 G 和小 W 希望统计一共有多少种和谐的品尝寿司的方案（对给定的正整数 $p$ 取模）。注意一个人可以不吃任何寿司。</p>
 
 <h2 id="input">Input</h2>
 
-<p>现在定义喵星球上的字符串给定方法：</p>
-
-<p>先给出一个正整数L，表示字符串的长度，接下来L个整数表示字符串的每个字符。
-输入的第一行是两个整数N和M。</p>
-
-<p>接下来有N行，每行包含第i 个喵星人的姓和名两个串。姓和名都是标准的喵星球上的
-字符串。</p>
-
-<p>接下来有M行，每行包含一个喵星球上的字符串，表示老师点名的串。</p>
+<p>输入文件的第 1 行包含 2 个正整数 $n,p$，中间用单个空格隔开，表示共有 n 种寿司，最终和谐的方案数要对 $p $取模。</p>
 
 <h2 id="output">Output</h2>
 
-<p>对于每个老师点名的串输出有多少个喵星人应该答到，然后在最后一行输出每个喵星人被点到多少次。</p>
+<p>输出一行包含 1 个整数，表示所求的方案模 $p$ 的结果。</p>
 
 <h2 id="solution">Solution</h2>
 
-<p>本来是个AC自动机裸题(?)，但是由于字符集很大，所以AC自动机要套个map，比较慢（不过好像可以过）。</p>
-
-<p>于是就作死地写了个后缀数组。把所有字符串丢进一个母串跑后缀数组，用10001隔开。对于每个模式串（即老师点名的串），我们可以二分出它在后缀数组中的匹配区间（即与某个排名区间内的后缀的LCP大于等于它的自身串长）。</p>
-
-<p>接下来考虑第一问，这相当于查询每个模式串的匹配区间内有多少个喵星人，他们姓名的某一个后缀在该区间内出现过。莫队一发即可。</p>
-
-<p>对于第二问，我们不妨对于每一个姓名的后缀单独计算其贡献，但是需要减掉重复的部分。我们可以将每个匹配区间的左右端点排序，然后按排名扫一遍后缀数组，同时对于每一个姓名记录其后缀上一次出现的位置。若遇到一个左端点，以其左端点为关键字加入树状数组；碰到一个右端点则将开始加入的左端点删掉。若该位置是一个姓名的后缀，只需将这个姓名的答案加上当前在树状数组中的左端点个数，再减去上一次已经算了的部分。</p>
-
-<p>设为$n$总串长，则时间复杂度为$O(n(logn + \sqrt{n}))$。<del>实际比暴力还慢。。。</del></p>
-
-<p>惊奇地发现这是我至今写过的最长的数据结构题？</p>
+<p>考虑状压DP，我们只将$\sqrt{n}$以内的质因子的情况压入状态，对所有数按其大于$\sqrt{n}$的因数分组，若没有大于$\sqrt{n}$的因数则单独分组。对于小于$\sqrt{n}$的因子实际上有３种状态，即某一个人选或者都不选，但这样不是很方便，简单起见我们用$f[i][j]$表示第一个人取的状态为 $i$ ,第二个人取的状态为 $j$ 的方案数。然后一开始就去掉无效状态加以优化（其实不优化也行）.
+　　
+然后对于每一组数，显然某个人只要选了其中的一个，另外一个人就一个也不能选，于是我们每次将ｆ复制到 $dp[][]$，转移也就不难推了。处理完一组后再令$f[u][v] = dp[u][v] + dp[v][u] - f[i][j]$，表示某一个人选或不选这一组数，由于这两种情况都包含了两人都不选的情况，所以还需要减掉重复.
+　　
+由于小于$\sqrt{n}$的质数最多只有８个，所以复杂度为$O(n * 3^8)$。</p>
 
 <h2 id="source">Source</h2>
-<pre><code class="c++">#include &lt;cstdio&gt;
-#include &lt;algorithm&gt;
-#include &lt;cstring&gt;
-#include &lt;cmath&gt;
-#include &lt;iostream&gt;
 
-#define For(i, j, k) for(int i = j; i &lt;= k; i++)
-#define Forr(i, j, k) for(int i = j; i &gt;= k; i--)
-#define getchar getchar_unlocked
+<pre><code class="c++">#include &lt;cstdio&gt;
+#include &lt;cstring&gt;
+#include &lt;algorithm&gt;
+
+#define For(i,j,k) for(int i = j;i &lt;= k;i++)
+#define Forr(i,j,k) for(int i = j;i &gt;= k;i--)
+
+const int N = 256;
+const int Prime[] = {1, 2, 3, 5, 7, 11, 13, 17, 19};
 
 using namespace std;
 
-const int N = 300010;
-const int MaxC = 10001;
+struct Num{
+	int fac, s;
 
-int Read(){
-	char c = getchar();
-	while(c &gt; '9' || c &lt; '0') c = getchar();
-	int x = 0;
-	while(c &lt;= '9' &amp;&amp; c &gt;= '0') x = x * 10 + c - '0', c = getchar();
-	return x;
-}
-
-int sa[N], c[N], t1[N], t2[N], S[N], n;
-
-void buildsa(int m){
-	int *x = t1, *y = t2;
-	For(i, 1, n) c[x[i] = S[i]]++;
-	For(i, 1, m) c[i] += c[i - 1];
-	Forr(i, n, 1) sa[c[x[i]]--] = i;
-	for(int k = 1; k &lt; n; k &lt;&lt;= 1){
-		int p = 0;
-		For(i, n - k + 1, n) y[++p] = i;
-		For(i, 1, n) if(sa[i] &gt; k) y[++p] = sa[i] - k;
-		For(i, 0, m) c[i] = 0;
-		For(i, 1, n) c[x[y[i]]]++;
-		For(i, 1, m) c[i] += c[i - 1];
-		Forr(i, n, 1) sa[c[x[y[i]]]--] = y[i];
-		swap(x, y);
-		x[sa[1]] = p = 1;
-		For(i, 2, n) x[sa[i]] = y[sa[i]] == y[sa[i - 1]] &amp;&amp; y[sa[i] + k] == y[sa[i - 1] + k] ? p : ++p;
-		if(p == n) break;
-		m = p;
-	}
-}
-
-int h[N][20], rk[N], Log2[N];
-
-void buildheight(){
-	For(i, 1, n) rk[sa[i]] = i;
-	int j = 0;
-	For(pos, 1, n){
-		if(j) --j;
-		int i = rk[pos];
-		while(sa[i] + j &lt;= n &amp;&amp; sa[i + 1] + j &lt;= n &amp;&amp; S[sa[i] + j] == S[sa[i + 1] + j]) ++j;
-		h[i][0] = j;
-	}
-	For(k, 1, 18)
-		for(int i = 1; i + (1 &lt;&lt; k) - 1 &lt;= n; i++) 
-			h[i][k] = min(h[i][k - 1], h[i + (1 &lt;&lt; (k - 1))][k - 1]);
-	For(i, 2, n) Log2[i] = Log2[i &gt;&gt; 1] + 1;
-}
-
-int query(int x, int y){
-	if(x == y) return n;
-	int t = Log2[y - x];
-	return min(h[x][t], h[y - (1 &lt;&lt; t)][t]);
-}
-
-int id[N];
-
-int AnsS[N], Sn;
-int bgn[N], len[N], lft[N], rt[N], AnsP[N], Pn;
-
-void calc_interval(){
-	For(i, 1, Pn){
-		int x = rk[bgn[i]];
-		int L = 1, R = x;
-		while(L &lt; R){
-			int M = (L + R) &gt;&gt; 1;
-			if(query(M, x) &gt;= len[i]) R = M;
-			else L = M + 1;
-		}
-		lft[i] = L;
-		L = x, R = n;
-		while(L &lt; R){
-			int M = (L + R + 1) &gt;&gt; 1;
-			if(query(x, M) &gt;= len[i]) L = M;
-			else R = M - 1;
-		}
-		rt[i] = L;
-	}
-}
-
-namespace questionA{
-	
-	int sz, Ans[N];
-
-	struct Op{
-		int l, r, id;
-		
-		bool operator &lt; (const Op&amp; B) const{
-			return l / sz &lt; B.l / sz || (l / sz == B.l / sz &amp;&amp; r &lt; B.r);
-		}
-	}A[N];
-
-	int cnt[N], ret;
-
-	inline void add(int x){
-		if(x){
-			if(!cnt[x]) ++ret;
-			cnt[x]++;
-		}
+	bool operator &lt; (const Num&amp; A) const{
+		return fac &lt; A.fac;
 	}
 
-	inline void del(int x){
-		if(x){
-			cnt[x]--;
-			if(!cnt[x]) --ret;
-		}
-	}
+}A[N&lt;&lt;1];
 
-	void main(){
-		For(i, 1, Pn) A[i] = (Op){lft[i], rt[i], i};
-		sz = ceil(sqrt(n));
-		sort(A + 1, A + Pn + 1);
-		int l = A[1].l, r = A[1].r;
-		For(i, l, r) add(id[sa[i]]);
-		Ans[A[1].id] = ret;
-		For(i, 2, Pn){
-			while(l &lt; A[i].l) del(id[sa[l]]), ++l;
-			while(l &gt; A[i].l) --l, add(id[sa[l]]);
-			while(r &lt; A[i].r) ++r, add(id[sa[r]]);
-			while(r &gt; A[i].r) del(id[sa[r]]), --r;
-			Ans[A[i].id] = ret;
-		}
-		For(i, 1, Pn) printf("%d\n", Ans[i]);
-	}
-};
+typedef long long LL;
 
-namespace questionB{
-	
-	int c[N];
-
-	inline int lowbit(int x){
-		return x &amp; (-x);
-	}
-
-	void add(int x, int v){
-		while(x &lt; n){
-			c[x] += v;
-			x += lowbit(x);
-		}
-	}
-
-	int sum(int x){
-		int ret = 0;
-		while(x){
-			ret += c[x];
-			x -= lowbit(x);
-		}
-		return ret;
-	}
-
-	int Next[N], Ans[N];
-
-	struct Op{
-		int l, pos, v;
-		
-		bool operator &lt; (const Op&amp; B) const{
-			return pos &lt; B.pos;
-		}
-	}A[N];
-
-	void main(){
-		int tot = 0, p = 1;
-		For(i, 1, Pn){
-			A[++tot] = (Op){lft[i], lft[i], 1};
-			A[++tot] = (Op){lft[i], rt[i] + 1, -1};
-		}
-		sort(A + 1, A + tot + 1);
-		For(i, 1, n){
-			while(p &lt;= tot &amp;&amp; A[p].pos == i) add(A[p].l, A[p].v), ++p;
-			if(id[sa[i]]){
-				int &amp;x = Next[id[sa[i]]];
-				Ans[id[sa[i]]] += sum(i) - sum(x);
-				x = i;
-			}
-		}
-		For(i, 1, Sn) printf("%d%c", Ans[i], i == Sn ? '\n' : ' ');
-	}
-};
+LL f[N][N], dp[N][N], Mod;
+int n, Begin[N], Next[N * N], to[N * N], e;
 
 int main(){
-	Sn = Read(), Pn = Read();
-	For(i, 1, Sn)
-		For(j, 0, 1){
-			int l = Read();
-			while(l--) S[++n] = Read(), id[n] = i;
-			S[++n] = MaxC;
-		}
-	For(i, 1, Pn){
-		int l = Read();
-		bgn[i] = n + 1, len[i] = l;
-		while(l--) S[++n] = Read();
-		S[++n] = MaxC;
+	scanf("%d%lld", &amp;n, &amp;Mod);
+	For(i,1,n-1){
+		int t = i + 1;
+		For(j,1,8) while(t % Prime[j] == 0) 
+			t /= Prime[j], A[i].s |= 1 &lt;&lt; (j - 1);
+		A[i].fac = t;
 	}
-	buildsa(MaxC);
-	buildheight();
-	calc_interval();
-	questionA::main();
-	questionB::main();
+	For(u,0,255) 
+		For(v,0,255) 
+			if(!(u &amp; v)){
+				Next[++e] = Begin[u];
+				Begin[u] = e;
+				to[e] = v;
+			}
+	sort(A + 1, A + n);
+	f[0][0] = dp[0][0] = 1;
+	int l = 1;
+	while(l &lt; n){
+		int r = l;
+		while(A[r+1].fac == A[l].fac &amp;&amp; A[l].fac != 1) ++r;
+		For(i,l,r)
+			Forr(u,255,0) for(int j = Begin[u];j;j = Next[j]){
+				int v = to[j];
+				if(!(A[i].s &amp; u)) dp[u][v|A[i].s] = 
+					(dp[u][v|A[i].s] + dp[u][v]) % Mod;
+			}
+		For(u,0,255) 
+			for(int j = Begin[u];j;j = Next[j]){
+				int v = to[j];
+				f[u][v] = 
+					(dp[u][v] + dp[v][u] - f[u][v] + Mod) % Mod;
+			}
+		For(u,0,255)
+			for(int j = Begin[u];j;j = Next[j]) 
+				dp[u][to[j]] = f[u][to[j]];
+		l = r + 1;
+	}
+	LL Ans = 0;
+	For(u,0,255) For(v,0,255) Ans = (Ans + f[u][v]) % Mod;
+	printf("%lld\n", Ans);
 	return 0;
 }
 </code></pre>
