@@ -41,8 +41,7 @@ Solution
 Source
 ---
 
-<pre><code class="c++">
-#include &lt;cstdio>
+<pre><code class="c++">#include &lt;cstdio>
 #include &lt;iostream>
 #include &lt;cstring>
 #include &lt;algorithm>
