@@ -1,11 +1,11 @@
   <!-- Page Content -->
         <div id="page-content-wrapper">
-        	<div style="margin:0px auto; width:70%; line-height:26px; overflow:hidden;">
+        	<div class="pagewidth">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="page-header" id="archives">
-                            <h3>Recent Posts</h3>
+                            <h3>Archives</h3>
                         </div>
 
                         <ul class="ant-timeline" id="archivelist">
@@ -32,7 +32,7 @@
 
 
                             {% comment %} Normal post list {% endcomment %}
-                            {% for post in site.posts %}
+                            {% for post in paginator.posts %}
 
                             {% comment %} If it already showed in stickie list {% endcomment %}
                             {% if post.stickie == true %}
@@ -40,16 +40,25 @@
                             {% endif %}
 
                             <li class="ant-timeline-item">
+                            	<div class="ant-timeline-item-tail"></div>
+                            	<div class="ant-timeline-item-head ant-timeline-item-head-blue"></div>
                                 <div class="ant-timeline-item-content">
-                                	<span class="badge badge-danger">{{ post.date | date: "%Y-%m-%d" }}</span>
-                                	<div class="d-flex align-items-center post-title">
+                                	<span class="badge badge-primary">{{ post.date | date: "%Y-%m-%d" }}</span></p>
+                                	<!--div class="d-flex align-items-center post-title"-->
                                         <a class="post-link h5 text-primary" href="{{site.url}}{{site.baseurl}}{{ post.url}}">{{ post.title }}</a>
-                                    </div>
+                                    <!--/div-->
                                     
-									<p>{{ post.intro }} </p>
-                                    <B><i>Tag:  </i></B>
+									<div class="introstyle">{{ post.intro }} </div>
+									<B>分类:  </B>
+                                    {% for cat in post.category %}
+                    					<a href="{{site.url}}{{site.baseurl}}/categories.html">
+										<span class="badge badge-primary">{{ cat }}</span></a>&nbsp;
+                    				{% endfor %}
+                    				<B>|&nbsp;</B>
+                                    <B>标签:  </B>
                                     {% for Tag in post.tag %}
-                    					<span class="badge badge-primary">{{ Tag }}  </span>
+                    					<a href="{{site.url}}{{site.baseurl}}/categories.html">
+										<span class="badge badge-primary">{{ Tag }}</span></a>&nbsp;
                     				{% endfor %}
                     				</p>
                                     
@@ -57,6 +66,37 @@
                             </li>
                             {% endfor %}
                         </ul>
+                        
+                        <!--pagination-->
+                        </p></p>
+                        {% if paginator.total_pages > 1 %}
+							<div class="pagination">
+							  {% if paginator.previous_page %}
+								<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Previous</a>&nbsp;&nbsp;
+							  {% else %}
+								<span style="color: gray;">&laquo; Previous </span>&nbsp;&nbsp;
+							  {% endif %}
+
+							  {% for page in (1..paginator.total_pages) %}
+								{% if page == paginator.page %}
+								  <B><span class="badge badge-danger">{{ page }}</span></B>&nbsp;&nbsp;&nbsp;
+								{% elsif page == 1 %}
+								  <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+								  <span class="badge badge-primary">{{ page }}</span></a>&nbsp;&nbsp;&nbsp;
+								{% else %}
+								  <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">
+								  <span class="badge badge-primary">{{ page }}</span></a>&nbsp;&nbsp;&nbsp;
+								{% endif %}
+							  {% endfor %}
+
+							  {% if paginator.next_page %}
+								<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"> Next &raquo;</a>
+							  {% else %}
+								<span style="color: gray;">Next &raquo;</span>
+							  {% endif %}
+							</div>
+						{% endif %}
+						
                     </div>
             </div>
             </div>

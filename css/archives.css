@@ -6,7 +6,7 @@
 
 .ant-timeline-item {
     position: relative;
-    padding: 0 0 12px;
+    padding: 0 0 20px;
     list-style: none;
     margin: 0
 }
@@ -82,6 +82,14 @@
 
 .ant-timeline.ant-timeline-pending .ant-timeline-item-last .ant-timeline-item-tail {
     display: block
+}
+
+.introstyle{
+	font-size: 13px; 
+	max-height: 108px; 
+	max-width: 700px;
+	overflow: hidden; 
+	text-overflow: ellipsis;
 }
 
 div.post-title{

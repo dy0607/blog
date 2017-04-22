@@ -2,17 +2,25 @@
 <div id="page-content-wrapper">
     <div class="container-fluid" id="post-content">
         <div class="row">		   
-	   		<div style="margin:0px auto; width:70%; line-height:26px; overflow:hidden;">
+	   		<div class="pagewidth">
             <div class="col-md-12">
                 <div class="page-header">
                     <h1 class="text-danger">
                         {{ page.title }}
                     </h1></p>
-                    <B><i>Date: {{ page.date | date: "%Y-%m-%d" }}</i></B></p>
-                    <B><i>Tag: </i></B>
+                    <B>Date: <span class="badge badge-primary">{{ page.date | date: "%Y-%m-%d" }}</span></B></p>
+                    <B>分类:  </B>
+                    {% for cat in page.category %}
+    					<a href="{{site.url}}{{site.baseurl}}/categories.html">
+						<span class="badge badge-primary">{{ cat }}</span></a>&nbsp;
+    				{% endfor %}
+    				<B>|&nbsp;</B>
+                    <B>标签:  </B>
                     {% for Tag in page.tag %}
-                    	<span class="badge badge-primary">{{ Tag }}  </span>
-                    {% endfor %}
+    					<a href="{{site.url}}{{site.baseurl}}/categories.html">
+						<span class="badge badge-primary">{{ Tag }}</span></a>&nbsp;
+    				{% endfor %}
+    				</p>
                     </p>
                 </div>
                 {{ page.content | markdownify }}

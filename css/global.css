@@ -64,3 +64,10 @@ pre{
         margin-left: 0px;
     }
 }
+.pagewidth{
+	margin: 0px auto; 
+	padding-right: 320px;
+    padding-left: 150px;
+	line-height: 26px; 
+	overflow: hidden;
+}

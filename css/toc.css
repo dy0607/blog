@@ -12,7 +12,7 @@ div#sidebar-toc-content ul li {
   line-height: 20px;
   text-indent: 10px;
   width: 250px; 
-  font-size: 17px; 
+  font-size: 20px; 
   white-space: nowrap; 
   overflow: hidden; 
   text-overflow:ellipsis;       /*兼容IE*/
