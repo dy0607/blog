@@ -6,16 +6,6 @@
     <title>{{site.title}}</title>
 
     {% include global-css.html %}
-
-
-    <!-- HighLighter -->
-    <link href="{{site.url}}{{site.baseurl}}/css/shCore.css" rel='stylesheet' type='text/css'/>
-    <link href="{{site.url}}{{site.baseurl}}/css/shCoreRDark.css" rel='stylesheet' type='text/css'/>
-    <link href="{{site.url}}{{site.baseurl}}/css/shThemeRDark.css" rel='stylesheet' type='text/css'/>
-
-    <link href="{{site.url}}{{site.baseurl}}/css/post.css" rel='stylesheet' type="text/css"/>
-    <link href="{{site.url}}{{site.baseurl}}/css/md-post-header-collapse.css" rel='stylesheet' type="text/css"/>
-    <link href="{{site.url}}{{site.baseurl}}/css/toc.css" rel='stylesheet' type="text/css"/>
     
     <!--MathJex-->
     <script type="text/x-mathjax-config">
@@ -26,6 +16,10 @@
 	<script type="text/javascript" async
   		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML">
 	</script>
+	
+	<link href="{{site.url}}{{site.baseurl}}/css/post.css" rel='stylesheet' type="text/css"/>
+    <link href="{{site.url}}{{site.baseurl}}/css/md-post-header-collapse.css" rel='stylesheet' type="text/css"/>
+    <link href="{{site.url}}{{site.baseurl}}/css/toc.css" rel='stylesheet' type="text/css"/>
 
 </head>
 <body>
@@ -41,9 +35,13 @@
 
     {% include global-js.html %}
     
-   <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/styles/atelier-lakeside-dark.css">
+    <!-- New Highlighter  -->
+   <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/styles/atelier-lakeside-dark.css"/>
 	<script src="{{site.url}}{{site.baseurl}}/js/highlight.pack.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
+	
+	<!-- Old Highlighter : do not remove it or there may be a compile error in post.js -->
+   <script src="{{site.url}}{{site.baseurl}}/js/shCore.js" type='text/javascript'></script>
 
    <!-- Header collapse -->
    <script src="{{site.url}}{{site.baseurl}}/js/md-post-header-collapse.js" type="text/javascript"></script>
