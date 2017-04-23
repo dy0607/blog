@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dy's Home</title>
+
+    <!-- Bootstrap CSS -->
+<link href="http://localhost:4000//css/bootstrap.min.css" rel='stylesheet' type='text/css'/>
+<link href="http://localhost:4000//css/simple-sidebar.css" rel='stylesheet' type='text/css'/>
+<link href="http://localhost:4000//css/font-awesome.min.css" rel='stylesheet' type='text/css'/>
+<link href="http://localhost:4000//css/global.css" rel='stylesheet' type='text/css'/>
+<link href="http://localhost:4000//css/footer.css" rel='stylesheet' type='text/css'/>
+
+
+    <link href="http://localhost:4000//css/categories.css" rel='stylesheet' type='text/css'/>
+
+</head>
+<body>
+
+    <div id="wrapper" >
+
+          
+<!-- Toggle Button -->
+ <a href="#menu-toggle" class="btn btn-outline-link hidden-xs-down" id="menu-toggle">
+     <i class="fa fa-bars" aria-hidden="true"></i>
+ </a>
+
+ <!-- Sidebar for desktop -->
+ <div id="sidebar-wrapper" class="hidden-xs-down">
+    <nav class="nav nav-pills flex-sm-row p-3 justify-content-center">
+        <a class="flex-sm-fill text-sm-center nav-link active" href="#sidebar-home-content" data-toggle="tab" role="tab" id="home">Home</a>
+        <a class="flex-sm-fill text-sm-center nav-link hidden-xl-down" href="#sidebar-toc-content" data-toggle="tab" role="tab" id="toc">Toc</a>
+    </nav>
+    <div class="tab-content" id="tab-content">
+        <div class="tab-pane text-sm-center active" id="sidebar-home-content">
+            <img class="site-author-image m-2" itemprop="image" src="https://avatars0.githubusercontent.com/u/20853317?v=3&s=460">
+            <div class="text-warning">dy0607</div>
+            <ul class="sidebar-nav">
+    <li title="主页">
+        <a href="http://localhost:4000//index.html">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            Home  
+        </a>
+    </li>
+    <li title="博文">
+        <a href="http://localhost:4000//index.html#archives">
+            <i class="fa fa-file-archive-o" aria-hidden="true"></i>
+            Archives 
+            <span class="badge badge-primary">9</span>
+        </a>
+    </li>
+    <li title="分类">
+        <a href="http://localhost:4000//categories.html">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            Categories
+            <span class="badge badge-primary">4</span>
+        </a>
+    </li>
+    <li title="关于">
+        <a href="http://localhost:4000//about.html" >
+            <i class="fa fa-user" aria-hidden="true"></i>
+            About
+        </a>
+    </li>
+    <li title="搜索">
+    	<a id="cb-search-btn" style="cursor: pointer; color: gray;">
+			<i class="fa fa-search" aria-hidden="true"></i>
+			   Search
+		</a>
+	<li>
+</ul>
+
+         	
+        </div>
+        <div class="tab-pane fade text-sm-left" id="sidebar-toc-content">
+        </div>
+    </div>
+    
+</div>
+
+<!-- Navbar for xsmall screen  -->
+<div class="hidden-sm-up">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Dy's Home</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="sidebar-nav">
+    <li title="主页">
+        <a href="http://localhost:4000//index.html">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            Home  
+        </a>
+    </li>
+    <li title="博文">
+        <a href="http://localhost:4000//index.html#archives">
+            <i class="fa fa-file-archive-o" aria-hidden="true"></i>
+            Archives 
+            <span class="badge badge-primary">9</span>
+        </a>
+    </li>
+    <li title="分类">
+        <a href="http://localhost:4000//categories.html">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            Categories
+            <span class="badge badge-primary">4</span>
+        </a>
+    </li>
+    <li title="关于">
+        <a href="http://localhost:4000//about.html" >
+            <i class="fa fa-user" aria-hidden="true"></i>
+            About
+        </a>
+    </li>
+    <li title="搜索">
+    	<a id="cb-search-btn" style="cursor: pointer; color: gray;">
+			<i class="fa fa-search" aria-hidden="true"></i>
+			   Search
+		</a>
+	<li>
+</ul>
+
+        </div>
+    </nav>
+</div>
+
+         <!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="http://localhost:4000//js/jquery-3.1.1.min.js"></script>
+<script src="http://localhost:4000//js/tether.min.js"></script>
+<script src="http://localhost:4000//js/bootstrap.min.js"></script>
+
+
+         <div id="page-content-wrapper">
+  <div class="container-fluid">
+	<div class="pagewidth_wide">
+    <div class="row">
+      <div class="col-md-6">
+
+        <div class="page-header" id="categories">
+          <h3>Categories </h3>
+        </div>
+        <div id="categories" class="categories" role="tablist" aria-multiselectable="false">
+          
+          <div class="card">
+            <div class="card-header border-0" role="tab" id="杂项header">
+              <h5 class="mb-0">
+                <a name="c_杂项" class="collapsed text-white" data-toggle="collapse" data-parent="#categories" href="#c_杂项" aria-expanded="false" aria-controls="c_杂项">杂项
+                  <span class="badge badge-default ml-2 text-white">1</span>
+                </a>
+              </h5>
+            </div>
+
+            <div id="c_杂项" class="collapse" role="tabpanel" aria-labelledby="杂项header">
+              <div class="card-block">
+                
+                <div class="text-white"> 2017-04-06 
+                <a class="text-white ml-3" href="http://localhost:4000//%E6%9D%82%E9%A1%B9/2017/04/06/Helloworld.html">Hello, World!</a> 
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header border-0" role="tab" id="省选header">
+              <h5 class="mb-0">
+                <a name="c_省选" class="collapsed text-white" data-toggle="collapse" data-parent="#categories" href="#c_省选" aria-expanded="false" aria-controls="c_省选">省选
+                  <span class="badge badge-default ml-2 text-white">6</span>
+                </a>
+              </h5>
+            </div>
+
+            <div id="c_省选" class="collapse" role="tabpanel" aria-labelledby="省选header">
+              <div class="card-block">
+                
+                <div class="text-white"> 2017-04-12 
+                <a class="text-white ml-3" href="http://localhost:4000//%E7%9C%81%E9%80%89/2017/04/12/HNOI2015-%E6%8E%A5%E6%B0%B4%E6%9E%9C-%E6%A0%91%E4%B8%8A%E8%8E%AB%E9%98%9F.html">HNOI2015 接水果 树上莫队</a> 
+                </div>
+                
+                <div class="text-white"> 2017-04-10 
+                <a class="text-white ml-3" href="http://localhost:4000//%E7%9C%81%E9%80%89/2017/04/10/HNOI2015-%E5%BC%80%E5%BA%97-%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86.html">HNOI2015 开店 树链剖分</a> 
+                </div>
+                
+                <div class="text-white"> 2017-04-09 
+                <a class="text-white ml-3" href="http://localhost:4000//%E7%9C%81%E9%80%89/2017/04/09/ZJOI-2009-%E5%AF%B9%E7%A7%B0%E7%9A%84%E6%AD%A3%E6%96%B9%E5%BD%A2-Manacher.html">ZJOI 2009 对称的正方形 Manacher</a> 
+                </div>
+                
+                <div class="text-white"> 2017-04-08 
+                <a class="text-white ml-3" href="http://localhost:4000//%E7%9C%81%E9%80%89/2017/04/08/ZJOI-2010-%E8%B4%AA%E5%90%83%E7%9A%84%E8%80%81%E9%BC%A0-%E7%BD%91%E7%BB%9C%E6%B5%81.html">ZJOI 2010 贪吃的老鼠 网络流</a> 
+                </div>
+                
+                <div class="text-white"> 2017-04-08 
+                <a class="text-white ml-3" href="http://localhost:4000//%E7%9C%81%E9%80%89/2017/04/08/SCOI-2012-%E5%96%B5%E6%98%9F%E7%90%83%E4%B8%8A%E7%9A%84%E7%82%B9%E5%90%8D-%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84+%E8%8E%AB%E9%98%9F.html">SCOI 2012 喵星球上的点名 后缀数组+莫队</a> 
+                </div>
+                
+                <div class="text-white"> 2017-04-08 
+                <a class="text-white ml-3" href="http://localhost:4000//%E7%9C%81%E9%80%89/2017/04/08/HNOI-2008-%E7%8E%A9%E5%85%B7%E8%A3%85%E7%AE%B1TOY-%E6%96%9C%E7%8E%87%E4%BC%98%E5%8C%96dp.html">HNOI 2008 玩具装箱TOY 斜率优化dp</a> 
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header border-0" role="tab" id="NOIheader">
+              <h5 class="mb-0">
+                <a name="c_NOI" class="collapsed text-white" data-toggle="collapse" data-parent="#categories" href="#c_NOI" aria-expanded="false" aria-controls="c_NOI">NOI
+                  <span class="badge badge-default ml-2 text-white">1</span>
+                </a>
+              </h5>
+            </div>
+
+            <div id="c_NOI" class="collapse" role="tabpanel" aria-labelledby="NOIheader">
+              <div class="card-block">
+                
+                <div class="text-white"> 2017-04-10 
+                <a class="text-white ml-3" href="http://localhost:4000//noi/2017/04/10/NOI-2015-%E5%AF%BF%E5%8F%B8%E6%99%9A%E5%AE%B4-%E7%8A%B6%E5%8E%8BDP.html">NOI 2015 寿司晚宴 状压DP</a> 
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header border-0" role="tab" id="OI历程header">
+              <h5 class="mb-0">
+                <a name="c_OI历程" class="collapsed text-white" data-toggle="collapse" data-parent="#categories" href="#c_OI历程" aria-expanded="false" aria-controls="c_OI历程">OI历程
+                  <span class="badge badge-default ml-2 text-white">1</span>
+                </a>
+              </h5>
+            </div>
+
+            <div id="c_OI历程" class="collapse" role="tabpanel" aria-labelledby="OI历程header">
+              <div class="card-block">
+                
+                <div class="text-white"> 2017-04-23 
+                <a class="text-white ml-3" href="http://localhost:4000//oi%E5%8E%86%E7%A8%8B/2017/04/23/HNOI2017-%E7%9C%81%E9%80%89%E6%80%BB%E7%BB%93.html">HNOI2017 省选总结</a> 
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+
+      </div>
+      <div class="col-md-6">
+        <div class="page-header" id="tags">
+          <h3>Tags</h3>
+        </div>
+        <div id="tags" class="categories" role="tablist" aria-multiselectable="false">
+          
+          <div class="card">
+            <div class="card-header border-0" role="tab" id="其它header">
+              <h5 class="mb-0">
+                <a name="t_其它" class="collapsed text-white" data-toggle="collapse" data-parent="#tags" href="#t_其它" aria-expanded="false" aria-controls="t_其它">其它
+                  <span class="badge badge-default ml-2 text-white">2</span>
+                </a>
+              </h5>
+            </div>
+
+            <div id="t_其它" class="collapse" role="tabpanel" aria-labelledby="其它header">
+              <div class="card-block">
+                
+                <div class="text-white"> 2017-04-23 
+                <a class="text-white ml-3" href="http://localhost:4000//oi%E5%8E%86%E7%A8%8B/2017/04/23/HNOI2017-%E7%9C%81%E9%80%89%E6%80%BB%E7%BB%93.html">HNOI2017 省选总结</a> </div>
+                
+                <div class="text-white"> 2017-04-06 
+                <a class="text-white ml-3" href="http://localhost:4000//%E6%9D%82%E9%A1%B9/2017/04/06/Helloworld.html">Hello, World!</a> </div>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header border-0" role="tab" id="DPheader">
+              <h5 class="mb-0">
+                <a name="t_DP" class="collapsed text-white" data-toggle="collapse" data-parent="#tags" href="#t_DP" aria-expanded="false" aria-controls="t_DP">DP
+                  <span class="badge badge-default ml-2 text-white">2</span>
+                </a>
+              </h5>
+            </div>
+
+            <div id="t_DP" class="collapse" role="tabpanel" aria-labelledby="DPheader">
+              <div class="card-block">
+                
+                <div class="text-white"> 2017-04-10 
+                <a class="text-white ml-3" href="http://localhost:4000//noi/2017/04/10/NOI-2015-%E5%AF%BF%E5%8F%B8%E6%99%9A%E5%AE%B4-%E7%8A%B6%E5%8E%8BDP.html">NOI 2015 寿司晚宴 状压DP</a> </div>
+                
+                <div class="text-white"> 2017-04-08 
+                <a class="text-white ml-3" href="http://localhost:4000//%E7%9C%81%E9%80%89/2017/04/08/HNOI-2008-%E7%8E%A9%E5%85%B7%E8%A3%85%E7%AE%B1TOY-%E6%96%9C%E7%8E%87%E4%BC%98%E5%8C%96dp.html">HNOI 2008 玩具装箱TOY 斜率优化dp</a> </div>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header border-0" role="tab" id="后缀数组header">
+              <h5 class="mb-0">
+                <a name="t_后缀数组" class="collapsed text-white" data-toggle="collapse" data-parent="#tags" href="#t_后缀数组" aria-expanded="false" aria-controls="t_后缀数组">后缀数组
+                  <span class="badge badge-default ml-2 text-white">1</span>
+                </a>
+              </h5>
+            </div>
+
+            <div id="t_后缀数组" class="collapse" role="tabpanel" aria-labelledby="后缀数组header">
+              <div class="card-block">
+                
+                <div class="text-white"> 2017-04-08 
+                <a class="text-white ml-3" href="http://localhost:4000//%E7%9C%81%E9%80%89/2017/04/08/SCOI-2012-%E5%96%B5%E6%98%9F%E7%90%83%E4%B8%8A%E7%9A%84%E7%82%B9%E5%90%8D-%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84+%E8%8E%AB%E9%98%9F.html">SCOI 2012 喵星球上的点名 后缀数组+莫队</a> </div>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header border-0" role="tab" id="莫队header">
+              <h5 class="mb-0">
+                <a name="t_莫队" class="collapsed text-white" data-toggle="collapse" data-parent="#tags" href="#t_莫队" aria-expanded="false" aria-controls="t_莫队">莫队
+                  <span class="badge badge-default ml-2 text-white">2</span>
+                </a>
+              </h5>
+            </div>
+
+            <div id="t_莫队" class="collapse" role="tabpanel" aria-labelledby="莫队header">
+              <div class="card-block">
+                
+                <div class="text-white"> 2017-04-12 
+                <a class="text-white ml-3" href="http://localhost:4000//%E7%9C%81%E9%80%89/2017/04/12/HNOI2015-%E6%8E%A5%E6%B0%B4%E6%9E%9C-%E6%A0%91%E4%B8%8A%E8%8E%AB%E9%98%9F.html">HNOI2015 接水果 树上莫队</a> </div>
+                
+                <div class="text-white"> 2017-04-08 
+                <a class="text-white ml-3" href="http://localhost:4000//%E7%9C%81%E9%80%89/2017/04/08/SCOI-2012-%E5%96%B5%E6%98%9F%E7%90%83%E4%B8%8A%E7%9A%84%E7%82%B9%E5%90%8D-%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84+%E8%8E%AB%E9%98%9F.html">SCOI 2012 喵星球上的点名 后缀数组+莫队</a> </div>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header border-0" role="tab" id="网络流header">
+              <h5 class="mb-0">
+                <a name="t_网络流" class="collapsed text-white" data-toggle="collapse" data-parent="#tags" href="#t_网络流" aria-expanded="false" aria-controls="t_网络流">网络流
+                  <span class="badge badge-default ml-2 text-white">1</span>
+                </a>
+              </h5>
+            </div>
+
+            <div id="t_网络流" class="collapse" role="tabpanel" aria-labelledby="网络流header">
+              <div class="card-block">
+                
+                <div class="text-white"> 2017-04-08 
+                <a class="text-white ml-3" href="http://localhost:4000//%E7%9C%81%E9%80%89/2017/04/08/ZJOI-2010-%E8%B4%AA%E5%90%83%E7%9A%84%E8%80%81%E9%BC%A0-%E7%BD%91%E7%BB%9C%E6%B5%81.html">ZJOI 2010 贪吃的老鼠 网络流</a> </div>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header border-0" role="tab" id="Manacherheader">
+              <h5 class="mb-0">
+                <a name="t_Manacher" class="collapsed text-white" data-toggle="collapse" data-parent="#tags" href="#t_Manacher" aria-expanded="false" aria-controls="t_Manacher">Manacher
+                  <span class="badge badge-default ml-2 text-white">1</span>
+                </a>
+              </h5>
+            </div>
+
+            <div id="t_Manacher" class="collapse" role="tabpanel" aria-labelledby="Manacherheader">
+              <div class="card-block">
+                
+                <div class="text-white"> 2017-04-09 
+                <a class="text-white ml-3" href="http://localhost:4000//%E7%9C%81%E9%80%89/2017/04/09/ZJOI-2009-%E5%AF%B9%E7%A7%B0%E7%9A%84%E6%AD%A3%E6%96%B9%E5%BD%A2-Manacher.html">ZJOI 2009 对称的正方形 Manacher</a> </div>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header border-0" role="tab" id="树链剖分header">
+              <h5 class="mb-0">
+                <a name="t_树链剖分" class="collapsed text-white" data-toggle="collapse" data-parent="#tags" href="#t_树链剖分" aria-expanded="false" aria-controls="t_树链剖分">树链剖分
+                  <span class="badge badge-default ml-2 text-white">1</span>
+                </a>
+              </h5>
+            </div>
+
+            <div id="t_树链剖分" class="collapse" role="tabpanel" aria-labelledby="树链剖分header">
+              <div class="card-block">
+                
+                <div class="text-white"> 2017-04-10 
+                <a class="text-white ml-3" href="http://localhost:4000//%E7%9C%81%E9%80%89/2017/04/10/HNOI2015-%E5%BC%80%E5%BA%97-%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86.html">HNOI2015 开店 树链剖分</a> </div>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header border-0" role="tab" id="主席树header">
+              <h5 class="mb-0">
+                <a name="t_主席树" class="collapsed text-white" data-toggle="collapse" data-parent="#tags" href="#t_主席树" aria-expanded="false" aria-controls="t_主席树">主席树
+                  <span class="badge badge-default ml-2 text-white">1</span>
+                </a>
+              </h5>
+            </div>
+
+            <div id="t_主席树" class="collapse" role="tabpanel" aria-labelledby="主席树header">
+              <div class="card-block">
+                
+                <div class="text-white"> 2017-04-10 
+                <a class="text-white ml-3" href="http://localhost:4000//%E7%9C%81%E9%80%89/2017/04/10/HNOI2015-%E5%BC%80%E5%BA%97-%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86.html">HNOI2015 开店 树链剖分</a> </div>
+                
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      </div>
+     </div>
+  </div>
+</div>
+
+         <footer class="mt-5 pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <strong>Credits</strong>
+        <table class="table table-sm">
+          <tr>
+            <td>Theme by:</td>
+            <td>Szhshp</td>
+          </tr>
+          <tr>
+            <td>Engine:</td>
+            <td>Ruby x Jekyll</td>
+          </tr>
+          </table>
+	  <p class="text-muted">Copyright &copy; dy0607 2017</p>
+        </div>
+
+        <div class="col-md-6">
+          <strong>Friend Links</strong>
+          <table class="table table-sm">
+            <tr>
+              <td><a href="http://sunshine-cfbsl.com"> Sunshine_cfbsl</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://blog.csdn.net/frods"> SAK</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://blog.csdn.net/miaomiao_ymxl"> MiaoMiao</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://blog.csdn.net/henyouyisiba123"> YYC</a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>  
+   
+    <!--search engine-->
+    <link rel="stylesheet" href="http://localhost:4000//search/css/cb-search.css">
+
+	<div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right: 0px;
+		  opacity: 0.95; background-color: #000; z-index: 9999; display: none;">
+		<input type="text" class="form-control cb-search-content" id="cb-search-content" 
+			style="position: fixed; top: 60px; " placeholder="Search for title or tag..." >
+
+		<div style="position: fixed; top: 30px; right: 260px;">
+		    <img src="/search/img/cb-close.png"  id="cb-close-btn"/>
+		</div>
+	</div>
+
+	
+	<script src="http://localhost:4000//search/js/bootstrap3-typeahead.min.js"></script>
+	<script src="http://localhost:4000//search/js/cb-search.js"></script>
+
+  </footer>
+  
+
+  
+<!--player-->
+<!--
+  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=220 height=52 src="//music.163.com/outchain/player?type=2&id=36897723&auto=1&height=32" style="position: fixed; bottom: 0; left: 30px;"></iframe>
+  -->
+
+
+    </div>
+
+    <script src="http://localhost:4000//js/sidebar.js"></script>
+
+</body>
+</html>
+

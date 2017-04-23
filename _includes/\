@@ -39,10 +39,10 @@
     <!--search engine-->
     <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/search/css/cb-search.css">
 
-	<div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right: 0px;
+	<div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right: 250px;
 		  opacity: 0.95; background-color: #000; z-index: 9999; display: none;">
 		<input type="text" class="form-control cb-search-content" id="cb-search-content" 
-			style="position: fixed; top: 60px; " placeholder="Search for title or tag..." >
+			style="position: fixed; top: 60px;" placeholder="Search for title or tag..." >
 
 		<div style="position: fixed; top: 30px; right: 260px;">
 		    <img src="/search/img/cb-close.png"  id="cb-close-btn"/>
