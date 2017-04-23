@@ -1,104 +1,120 @@
   <!-- Page Content -->
-        <div id="page-content-wrapper">
-        	<div class="pagewidth">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="page-header" id="archives">
-                            <h3>Archives</h3>
-                        </div>
+<div id="page-content-wrapper">
+	<div class="pagewidth">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="page-header" id="archives">
+					<h3>Archives</h3>
+				</div>
 
-                        <ul class="ant-timeline" id="archivelist">
-
-
-                            {% comment %} Stickie list {% endcomment %}
-                            {% for post in site.posts %}
-
-                            {% if post.stickie != true %}
-                            {% continue %}
-                            {% endif %}
+				<ul class="ant-timeline" id="archivelist">
 
 
-                            <li class="ant-timeline-item">
-                                <div class="ant-timeline-item-content">
-                                	<div class="d-flex align-items-center post-title">
-                                        <a class="post-link h5 text-danger" href="{{site.url}}{{site.baseurl}}{{ post.url}}">{{ post.title }}</a>
-                                    </div>
-                                    <span class="text-danger">{{ post.date | date: "%Y-%m-%d" }} </span>
-                                    <p>{{ post.intro }} </p>
-                                </div>
-                            </li>
-                            {% endfor %}
+					{% comment %} Stickie list {% endcomment %}
+					{% for post in site.posts %}
+
+					{% if post.stickie != true %}
+					{% continue %}
+					{% endif %}
 
 
-                            {% comment %} Normal post list {% endcomment %}
-                            {% for post in paginator.posts %}
+					<li class="ant-timeline-item">
+						<div class="ant-timeline-item-tail"></div>
+						<div class="ant-timeline-item-head ant-timeline-item-head-red"></div>
+						<div class="ant-timeline-item-content">
+							<span class="badge badge-danger">{{ post.date | date: "%Y-%m-%d" }}</span></p>
+							<!--div class="d-flex align-items-center post-title"-->
+								<a class="post-link h5 text-danger" href="{{site.url}}{{site.baseurl}}{{ post.url}}">{{ post.title }}</a>
+							<!--/div-->
+							
+							<div class="introstyle">{{ post.intro }} </div>
+							<B>分类:  </B>
+							{% for cat in post.category %}
+								<a href="{{site.url}}{{site.baseurl}}/categories.html">
+								<span class="badge badge-danger">{{ cat }}</span></a>&nbsp;
+							{% endfor %}
+							<B>|&nbsp;</B>
+							<B>标签:  </B>
+							{% for Tag in post.tag %}
+								<a href="{{site.url}}{{site.baseurl}}/categories.html">
+								<span class="badge badge-danger">{{ Tag }}</span></a>&nbsp;
+							{% endfor %}
+							</p>
+							
+						</div>
+					</li>
+					{% endfor %}
 
-                            {% comment %} If it already showed in stickie list {% endcomment %}
-                            {% if post.stickie == true %}
-                            {% continue %}
-                            {% endif %}
 
-                            <li class="ant-timeline-item">
-                            	<div class="ant-timeline-item-tail"></div>
-                            	<div class="ant-timeline-item-head ant-timeline-item-head-blue"></div>
-                                <div class="ant-timeline-item-content">
-                                	<span class="badge badge-primary">{{ post.date | date: "%Y-%m-%d" }}</span></p>
-                                	<!--div class="d-flex align-items-center post-title"-->
-                                        <a class="post-link h5 text-primary" href="{{site.url}}{{site.baseurl}}{{ post.url}}">{{ post.title }}</a>
-                                    <!--/div-->
-                                    
-									<div class="introstyle">{{ post.intro }} </div>
-									<B>分类:  </B>
-                                    {% for cat in post.category %}
-                    					<a href="{{site.url}}{{site.baseurl}}/categories.html">
-										<span class="badge badge-primary">{{ cat }}</span></a>&nbsp;
-                    				{% endfor %}
-                    				<B>|&nbsp;</B>
-                                    <B>标签:  </B>
-                                    {% for Tag in post.tag %}
-                    					<a href="{{site.url}}{{site.baseurl}}/categories.html">
-										<span class="badge badge-primary">{{ Tag }}</span></a>&nbsp;
-                    				{% endfor %}
-                    				</p>
-                                    
-                                </div>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                        
-                        <!--pagination-->
-                        </p></p>
-                        {% if paginator.total_pages > 1 %}
-							<div class="pagination">
-							  {% if paginator.previous_page %}
-								<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Previous</a>&nbsp;&nbsp;
-							  {% else %}
-								<span style="color: gray;">&laquo; Previous </span>&nbsp;&nbsp;
-							  {% endif %}
+					{% comment %} Normal post list {% endcomment %}
+					{% for post in paginator.posts %}
 
-							  {% for page in (1..paginator.total_pages) %}
-								{% if page == paginator.page %}
-								  <B><span class="badge badge-danger">{{ page }}</span></B>&nbsp;&nbsp;&nbsp;
-								{% elsif page == 1 %}
-								  <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-								  <span class="badge badge-primary">{{ page }}</span></a>&nbsp;&nbsp;&nbsp;
-								{% else %}
-								  <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">
-								  <span class="badge badge-primary">{{ page }}</span></a>&nbsp;&nbsp;&nbsp;
-								{% endif %}
-							  {% endfor %}
+					{% comment %} If it already showed in stickie list {% endcomment %}
+					{% if post.stickie == true %}
+					{% continue %}
+					{% endif %}
 
-							  {% if paginator.next_page %}
-								<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"> Next &raquo;</a>
-							  {% else %}
-								<span style="color: gray;">Next &raquo;</span>
-							  {% endif %}
-							</div>
+					<li class="ant-timeline-item">
+						<div class="ant-timeline-item-tail"></div>
+						<div class="ant-timeline-item-head ant-timeline-item-head-blue"></div>
+						<div class="ant-timeline-item-content">
+							<span class="badge badge-primary">{{ post.date | date: "%Y-%m-%d" }}</span></p>
+							<!--div class="d-flex align-items-center post-title"-->
+								<a class="post-link h5 text-primary" href="{{site.url}}{{site.baseurl}}{{ post.url}}">{{ post.title }}</a>
+							<!--/div-->
+							
+							<div class="introstyle">{{ post.intro }} </div>
+							<B>分类:  </B>
+							{% for cat in post.category %}
+								<a href="{{site.url}}{{site.baseurl}}/categories.html">
+								<span class="badge badge-primary">{{ cat }}</span></a>&nbsp;
+							{% endfor %}
+							<B>|&nbsp;</B>
+							<B>标签:  </B>
+							{% for Tag in post.tag %}
+								<a href="{{site.url}}{{site.baseurl}}/categories.html">
+								<span class="badge badge-primary">{{ Tag }}</span></a>&nbsp;
+							{% endfor %}
+							</p>
+							
+						</div>
+					</li>
+					{% endfor %}
+				</ul>
+				
+				<!--pagination-->
+				</p></p>
+				{% if paginator.total_pages > 1 %}
+					<div class="pagination">
+					  {% if paginator.previous_page %}
+						<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Previous</a>&nbsp;&nbsp;
+					  {% else %}
+						<span style="color: gray;">&laquo; Previous </span>&nbsp;&nbsp;
+					  {% endif %}
+
+					  {% for page in (1..paginator.total_pages) %}
+						{% if page == paginator.page %}
+						  <B><span class="badge badge-danger">{{ page }}</span></B>&nbsp;&nbsp;&nbsp;
+						{% elsif page == 1 %}
+						  <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+						  <span class="badge badge-primary">{{ page }}</span></a>&nbsp;&nbsp;&nbsp;
+						{% else %}
+						  <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">
+						  <span class="badge badge-primary">{{ page }}</span></a>&nbsp;&nbsp;&nbsp;
 						{% endif %}
-						
-                    </div>
-            </div>
-            </div>
-        </div>
-        <!-- /#page-content-wrapper -->
+					  {% endfor %}
+
+					  {% if paginator.next_page %}
+						<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"> Next &raquo;</a>
+					  {% else %}
+						<span style="color: gray;">Next &raquo;</span>
+					  {% endif %}
+					</div>
+				{% endif %}
+				
+			</div>
+	</div>
+	</div>
+</div>
+<!-- /#page-content-wrapper -->
