@@ -1,28 +1,34 @@
 <ul class="sidebar-nav">
-    <li data-toggle="tooltip" data-placement="left" data-original-title="主页">
+    <li title="主页">
         <a href="{{site.url}}{{site.baseurl}}/index.html">
             <i class="fa fa-home" aria-hidden="true"></i>
             Home  
         </a>
     </li>
-    <li data-toggle="tooltip" data-placement="left" data-original-title="博文">
+    <li title="博文">
         <a href="{{site.url}}{{site.baseurl}}/index.html#archives">
             <i class="fa fa-file-archive-o" aria-hidden="true"></i>
             Archives 
             <span class="badge badge-primary">{{ site.posts.size}}</span>
         </a>
     </li>
-    <li data-toggle="tooltip" data-placement="left" data-original-title="分类">
+    <li title="分类">
         <a href="{{site.url}}{{site.baseurl}}/categories.html">
             <i class="fa fa-tags" aria-hidden="true"></i>
             Categories
             <span class="badge badge-primary">{{ site.categories.size}}</span>
         </a>
     </li>
-    <li data-toggle="tooltip" data-placement="left" data-original-title="关于">
+    <li title="关于">
         <a href="{{site.url}}{{site.baseurl}}/about.html" >
             <i class="fa fa-user" aria-hidden="true"></i>
             About
         </a>
     </li>
+    <li title="搜索">
+    	<a id="cb-search-btn" style="cursor: pointer; color: gray;">
+			<i class="fa fa-search" aria-hidden="true"></i>
+			   Search
+		</a>
+	<li>
 </ul>

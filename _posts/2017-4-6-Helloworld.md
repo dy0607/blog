@@ -11,6 +11,9 @@ intro: Hello, World!
 测试一下代码高亮和MathJex.
 
 Here is $a + b$ Problem.
+
+//------------------------------------------------------------------------------------------------------------------------//
+
 <pre><code class="c++">#include &lt;cstdio>
 int main(){
 	scanf("%d%d", &a, &b);
