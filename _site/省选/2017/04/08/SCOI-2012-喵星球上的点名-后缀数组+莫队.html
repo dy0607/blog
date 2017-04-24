@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dy's Home</title>
+
+    <!-- Bootstrap CSS -->
+<link href="http://localhost:4000//css/bootstrap.min.css" rel='stylesheet' type='text/css'/>
+<link href="http://localhost:4000//css/simple-sidebar.css" rel='stylesheet' type='text/css'/>
+<link href="http://localhost:4000//css/font-awesome.min.css" rel='stylesheet' type='text/css'/>
+<link href="http://localhost:4000//css/global.css" rel='stylesheet' type='text/css'/>
+<link href="http://localhost:4000//css/footer.css" rel='stylesheet' type='text/css'/>
+
+    
+    <!--MathJex-->
+    <script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+  		tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+	});
+	</script>
+	<script type="text/javascript" async
+  		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML">
+	</script>
+	
+	<link href="http://localhost:4000//css/post.css" rel='stylesheet' type="text/css"/>
+    <link href="http://localhost:4000//css/md-post-header-collapse.css" rel='stylesheet' type="text/css"/>
+    <link href="http://localhost:4000//css/toc.css" rel='stylesheet' type="text/css"/>
+
+</head>
+<body>
+	
+    <div id="wrapper" >
+		
+	    
+<!-- Toggle Button -->
+ <a href="#menu-toggle" class="btn btn-outline-link hidden-xs-down" id="menu-toggle">
+     <i class="fa fa-bars" aria-hidden="true"></i>
+ </a>
+
+ <!-- Sidebar for desktop -->
+ <div id="sidebar-wrapper" class="hidden-xs-down">
+    <nav class="nav nav-pills flex-sm-row p-3 justify-content-center">
+        <a class="flex-sm-fill text-sm-center nav-link active" href="#sidebar-home-content" data-toggle="tab" role="tab" id="home">Home</a>
+        <a class="flex-sm-fill text-sm-center nav-link hidden-xl-down" href="#sidebar-toc-content" data-toggle="tab" role="tab" id="toc">Toc</a>
+    </nav>
+    <div class="tab-content" id="tab-content">
+        <div class="tab-pane text-sm-center active" id="sidebar-home-content">
+            <img class="site-author-image m-2" itemprop="image" src="https://avatars0.githubusercontent.com/u/20853317?v=3&s=460">
+            <div class="text-warning">dy0607</div>
+            <ul class="sidebar-nav">
+    <li title="主页">
+        <a href="http://localhost:4000//index.html">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            Home  
+        </a>
+    </li>
+    <li title="博文">
+        <a href="http://localhost:4000//index.html#archives">
+            <i class="fa fa-file-archive-o" aria-hidden="true"></i>
+            Archives 
+            <span class="badge badge-primary">9</span>
+        </a>
+    </li>
+    <li title="分类">
+        <a href="http://localhost:4000//categories.html">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            Categories
+            <span class="badge badge-primary">4</span>
+        </a>
+    </li>
+    <li title="关于">
+        <a href="http://localhost:4000//about.html" >
+            <i class="fa fa-user" aria-hidden="true"></i>
+            About
+        </a>
+    </li>
+    <li title="搜索">
+    	<a id="cb-search-btn" style="cursor: pointer; color: gray;">
+			<i class="fa fa-search" aria-hidden="true"></i>
+			   Search
+		</a>
+	<li>
+</ul>
+
+         	
+        </div>
+        <div class="tab-pane fade text-sm-left" id="sidebar-toc-content">
+        </div>
+    </div>
+    
+</div>
+
+<!-- Navbar for xsmall screen  -->
+<div class="hidden-sm-up">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Dy's Home</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="sidebar-nav">
+    <li title="主页">
+        <a href="http://localhost:4000//index.html">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            Home  
+        </a>
+    </li>
+    <li title="博文">
+        <a href="http://localhost:4000//index.html#archives">
+            <i class="fa fa-file-archive-o" aria-hidden="true"></i>
+            Archives 
+            <span class="badge badge-primary">9</span>
+        </a>
+    </li>
+    <li title="分类">
+        <a href="http://localhost:4000//categories.html">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            Categories
+            <span class="badge badge-primary">4</span>
+        </a>
+    </li>
+    <li title="关于">
+        <a href="http://localhost:4000//about.html" >
+            <i class="fa fa-user" aria-hidden="true"></i>
+            About
+        </a>
+    </li>
+    <li title="搜索">
+    	<a id="cb-search-btn" style="cursor: pointer; color: gray;">
+			<i class="fa fa-search" aria-hidden="true"></i>
+			   Search
+		</a>
+	<li>
+</ul>
+
+        </div>
+    </nav>
+</div>
+ 
+	   <!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="http://localhost:4000//js/jquery-3.1.1.min.js"></script>
+<script src="http://localhost:4000//js/tether.min.js"></script>
+<script src="http://localhost:4000//js/bootstrap.min.js"></script>
+
+
+	   <!-- Page Content -->
+<div id="page-content-wrapper">
+    <div class="container-fluid" id="post-content">
+        <div class="row">		   
+	   		<div class="pagewidth">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <h1 class="text-danger">
+                        SCOI 2012 喵星球上的点名 后缀数组+莫队
+                    </h1></p>
+                    <B>Date: <span class="badge badge-primary">2017-04-08</span></B></p>
+                    <B>分类:  </B>
+                    
+    					<a href="http://localhost:4000//categories.html">
+						<span class="badge badge-primary">省选</span></a>&nbsp;
+    				
+    				<B>|&nbsp;</B>
+                    <B>标签:  </B>
+                    
+    					<a href="http://localhost:4000//categories.html">
+						<span class="badge badge-primary">后缀数组</span></a>&nbsp;
+    				
+    					<a href="http://localhost:4000//categories.html">
+						<span class="badge badge-primary">莫队</span></a>&nbsp;
+    				
+    				</p>
+                    </p>
+                </div>
+                <h2 id="description">Description</h2>
+
+<p>a180285幸运地被选做了地球到喵星球的留学生。他发现喵星人在上课前的点名现象非常有趣。 假设课堂上有N个喵星人，每个喵星人的名字由姓和名构成。喵星球上的老师会选择M个串来点名，每次读出一个串的时候，如果这个串是一个喵星人的姓或名的子串，那么这个喵星人就必须答到。 然而，由于喵星人的字码过于古怪，以至于不能用ASCII码来表示。为了方便描述，a180285决定用数串来表示喵星人的名字。</p>
+
+<p>现在你能帮助a180285统计每次点名的时候有多少喵星人答到，以及M次点名结束后每个喵星人答到多少次吗？</p>
+
+<h2 id="input">Input</h2>
+
+<p>现在定义喵星球上的字符串给定方法：</p>
+
+<p>先给出一个正整数L，表示字符串的长度，接下来L个整数表示字符串的每个字符。
+输入的第一行是两个整数N和M。</p>
+
+<p>接下来有N行，每行包含第i 个喵星人的姓和名两个串。姓和名都是标准的喵星球上的
+字符串。</p>
+
+<p>接下来有M行，每行包含一个喵星球上的字符串，表示老师点名的串。</p>
+
+<h2 id="output">Output</h2>
+
+<p>对于每个老师点名的串输出有多少个喵星人应该答到，然后在最后一行输出每个喵星人被点到多少次。</p>
+
+<h2 id="solution">Solution</h2>
+
+<p>本来是个AC自动机裸题(?)，但是由于字符集很大，所以AC自动机要套个map，比较慢（不过好像可以过）。</p>
+
+<p>于是就作死地写了个后缀数组。把所有字符串丢进一个母串跑后缀数组，用10001隔开。对于每个模式串（即老师点名的串），我们可以二分出它在后缀数组中的匹配区间（即与某个排名区间内的后缀的LCP大于等于它的自身串长）。</p>
+
+<p>接下来考虑第一问，这相当于查询每个模式串的匹配区间内有多少个喵星人，他们姓名的某一个后缀在该区间内出现过。莫队一发即可。</p>
+
+<p>对于第二问，我们不妨对于每一个姓名的后缀单独计算其贡献，但是需要减掉重复的部分。我们可以将每个匹配区间的左右端点排序，然后按排名扫一遍后缀数组，同时对于每一个姓名记录其后缀上一次出现的位置。若遇到一个左端点，以其左端点为关键字加入树状数组；碰到一个右端点则将开始加入的左端点删掉。若该位置是一个姓名的后缀，只需将这个姓名的答案加上当前在树状数组中的左端点个数，再减去上一次已经算了的部分。</p>
+
+<p>设为$n$总串长，则时间复杂度为$O(n(logn + \sqrt{n}))$。<del>实际比暴力还慢。。。</del></p>
+
+<p>惊奇地发现这是我至今写过的最长的数据结构题？</p>
+
+<h2 id="source">Source</h2>
+<pre><code class="c++">#include &lt;cstdio&gt;
+#include &lt;algorithm&gt;
+#include &lt;cstring&gt;
+#include &lt;cmath&gt;
+#include &lt;iostream&gt;
+
+#define For(i, j, k) for(int i = j; i &lt;= k; i++)
+#define Forr(i, j, k) for(int i = j; i &gt;= k; i--)
+#define getchar getchar_unlocked
+
+using namespace std;
+
+const int N = 300010;
+const int MaxC = 10001;
+
+int Read(){
+	char c = getchar();
+	while(c &gt; '9' || c &lt; '0') c = getchar();
+	int x = 0;
+	while(c &lt;= '9' &amp;&amp; c &gt;= '0') x = x * 10 + c - '0', c = getchar();
+	return x;
+}
+
+int sa[N], c[N], t1[N], t2[N], S[N], n;
+
+void buildsa(int m){
+	int *x = t1, *y = t2;
+	For(i, 1, n) c[x[i] = S[i]]++;
+	For(i, 1, m) c[i] += c[i - 1];
+	Forr(i, n, 1) sa[c[x[i]]--] = i;
+	for(int k = 1; k &lt; n; k &lt;&lt;= 1){
+		int p = 0;
+		For(i, n - k + 1, n) y[++p] = i;
+		For(i, 1, n) if(sa[i] &gt; k) y[++p] = sa[i] - k;
+		For(i, 0, m) c[i] = 0;
+		For(i, 1, n) c[x[y[i]]]++;
+		For(i, 1, m) c[i] += c[i - 1];
+		Forr(i, n, 1) sa[c[x[y[i]]]--] = y[i];
+		swap(x, y);
+		x[sa[1]] = p = 1;
+		For(i, 2, n) x[sa[i]] = y[sa[i]] == y[sa[i - 1]] &amp;&amp; y[sa[i] + k] == y[sa[i - 1] + k] ? p : ++p;
+		if(p == n) break;
+		m = p;
+	}
+}
+
+int h[N][20], rk[N], Log2[N];
+
+void buildheight(){
+	For(i, 1, n) rk[sa[i]] = i;
+	int j = 0;
+	For(pos, 1, n){
+		if(j) --j;
+		int i = rk[pos];
+		while(sa[i] + j &lt;= n &amp;&amp; sa[i + 1] + j &lt;= n &amp;&amp; S[sa[i] + j] == S[sa[i + 1] + j]) ++j;
+		h[i][0] = j;
+	}
+	For(k, 1, 18)
+		for(int i = 1; i + (1 &lt;&lt; k) - 1 &lt;= n; i++) 
+			h[i][k] = min(h[i][k - 1], h[i + (1 &lt;&lt; (k - 1))][k - 1]);
+	For(i, 2, n) Log2[i] = Log2[i &gt;&gt; 1] + 1;
+}
+
+int query(int x, int y){
+	if(x == y) return n;
+	int t = Log2[y - x];
+	return min(h[x][t], h[y - (1 &lt;&lt; t)][t]);
+}
+
+int id[N];
+
+int AnsS[N], Sn;
+int bgn[N], len[N], lft[N], rt[N], AnsP[N], Pn;
+
+void calc_interval(){
+	For(i, 1, Pn){
+		int x = rk[bgn[i]];
+		int L = 1, R = x;
+		while(L &lt; R){
+			int M = (L + R) &gt;&gt; 1;
+			if(query(M, x) &gt;= len[i]) R = M;
+			else L = M + 1;
+		}
+		lft[i] = L;
+		L = x, R = n;
+		while(L &lt; R){
+			int M = (L + R + 1) &gt;&gt; 1;
+			if(query(x, M) &gt;= len[i]) L = M;
+			else R = M - 1;
+		}
+		rt[i] = L;
+	}
+}
+
+namespace questionA{
+	
+	int sz, Ans[N];
+
+	struct Op{
+		int l, r, id;
+		
+		bool operator &lt; (const Op&amp; B) const{
+			return l / sz &lt; B.l / sz || (l / sz == B.l / sz &amp;&amp; r &lt; B.r);
+		}
+	}A[N];
+
+	int cnt[N], ret;
+
+	inline void add(int x){
+		if(x){
+			if(!cnt[x]) ++ret;
+			cnt[x]++;
+		}
+	}
+
+	inline void del(int x){
+		if(x){
+			cnt[x]--;
+			if(!cnt[x]) --ret;
+		}
+	}
+
+	void main(){
+		For(i, 1, Pn) A[i] = (Op){lft[i], rt[i], i};
+		sz = ceil(sqrt(n));
+		sort(A + 1, A + Pn + 1);
+		int l = A[1].l, r = A[1].r;
+		For(i, l, r) add(id[sa[i]]);
+		Ans[A[1].id] = ret;
+		For(i, 2, Pn){
+			while(l &lt; A[i].l) del(id[sa[l]]), ++l;
+			while(l &gt; A[i].l) --l, add(id[sa[l]]);
+			while(r &lt; A[i].r) ++r, add(id[sa[r]]);
+			while(r &gt; A[i].r) del(id[sa[r]]), --r;
+			Ans[A[i].id] = ret;
+		}
+		For(i, 1, Pn) printf("%d\n", Ans[i]);
+	}
+};
+
+namespace questionB{
+	
+	int c[N];
+
+	inline int lowbit(int x){
+		return x &amp; (-x);
+	}
+
+	void add(int x, int v){
+		while(x &lt; n){
+			c[x] += v;
+			x += lowbit(x);
+		}
+	}
+
+	int sum(int x){
+		int ret = 0;
+		while(x){
+			ret += c[x];
+			x -= lowbit(x);
+		}
+		return ret;
+	}
+
+	int Next[N], Ans[N];
+
+	struct Op{
+		int l, pos, v;
+		
+		bool operator &lt; (const Op&amp; B) const{
+			return pos &lt; B.pos;
+		}
+	}A[N];
+
+	void main(){
+		int tot = 0, p = 1;
+		For(i, 1, Pn){
+			A[++tot] = (Op){lft[i], lft[i], 1};
+			A[++tot] = (Op){lft[i], rt[i] + 1, -1};
+		}
+		sort(A + 1, A + tot + 1);
+		For(i, 1, n){
+			while(p &lt;= tot &amp;&amp; A[p].pos == i) add(A[p].l, A[p].v), ++p;
+			if(id[sa[i]]){
+				int &amp;x = Next[id[sa[i]]];
+				Ans[id[sa[i]]] += sum(i) - sum(x);
+				x = i;
+			}
+		}
+		For(i, 1, Sn) printf("%d%c", Ans[i], i == Sn ? '\n' : ' ');
+	}
+};
+
+int main(){
+	Sn = Read(), Pn = Read();
+	For(i, 1, Sn)
+		For(j, 0, 1){
+			int l = Read();
+			while(l--) S[++n] = Read(), id[n] = i;
+			S[++n] = MaxC;
+		}
+	For(i, 1, Pn){
+		int l = Read();
+		bgn[i] = n + 1, len[i] = l;
+		while(l--) S[++n] = Read();
+		S[++n] = MaxC;
+	}
+	buildsa(MaxC);
+	buildheight();
+	calc_interval();
+	questionA::main();
+	questionB::main();
+	return 0;
+}
+</code></pre>
+
+                </p></p>
+
+                <!-- don't delete this div as this is header collapse end identified  -->
+                <div id="content-end"></div>
+                <div></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<!-- /#page-content-wrapper -->
+
+	   <div class="row">
+    <div class="col-md-12">
+        <div id="disqus_thread"></div>
+        <script>
+          var disqus_config = function () {
+            this.page.url = 'https://dy0607.github.io';  
+            this.page.identifier = 'https://dy0607.github.io/dy0607.github.io/index.html';
+          };
+          
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://dy0607.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+	   <footer class="mt-5 pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <strong>Credits</strong>
+        <table class="table table-sm">
+          <tr>
+            <td>Theme by:</td>
+            <td>Szhshp</td>
+          </tr>
+          <tr>
+            <td>Engine:</td>
+            <td>Ruby x Jekyll</td>
+          </tr>
+          </table>
+	  <p class="text-muted">Copyright &copy; dy0607 2017</p>
+        </div>
+
+        <div class="col-md-6">
+          <strong>Friend Links</strong>
+          <table class="table table-sm">
+            <tr>
+              <td><a href="http://sunshine-cfbsl.com"> Sunshine_cfbsl</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://blog.csdn.net/frods"> SAK</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://blog.csdn.net/miaomiao_ymxl"> MiaoMiao</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://blog.csdn.net/henyouyisiba123"> YYC</a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>  
+   
+    <!--search engine-->
+    <link rel="stylesheet" href="http://localhost:4000//search/css/cb-search.css">
+
+	<div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right: 0px;
+		  opacity: 0.95; background-color: #000; z-index: 9999; display: none;">
+		<input type="text" class="form-control cb-search-content" id="cb-search-content" 
+			style="position: fixed; top: 60px; " placeholder="Search for title or tag..." >
+
+		<div style="position: fixed; top: 30px; right: 260px;">
+		    <img src="/search/img/cb-close.png"  id="cb-close-btn"/>
+		</div>
+	</div>
+
+	
+	<script src="http://localhost:4000//search/js/bootstrap3-typeahead.min.js"></script>
+	<script src="http://localhost:4000//search/js/cb-search.js"></script>
+
+  </footer>
+  
+
+  
+<!--player-->
+<!--
+  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=220 height=52 src="//music.163.com/outchain/player?type=2&id=36897723&auto=1&height=32" style="position: fixed; bottom: 0; left: 30px;"></iframe>
+  -->
+
+
+    </div>
+    
+    <!-- New Highlighter  -->
+   <link rel="stylesheet" href="http://localhost:4000//styles/atelier-lakeside-dark.css"/>
+	<script src="http://localhost:4000//js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	
+	<!-- Old Highlighter : do not remove it or there may be a compile error in post.js -->
+   <script src="http://localhost:4000//js/shCore.js" type='text/javascript'></script>
+
+   <!-- Header collapse -->
+   <script src="http://localhost:4000//js/md-post-header-collapse.js" type="text/javascript"></script>
+
+   <script src="http://localhost:4000//js/sidebar.js" type="text/javascript"></script>
+   <script src="http://localhost:4000//js/post.js" type="text/javascript"></script>
+   <script src="http://localhost:4000//js/toc.js" type="text/javascript"></script>
+
+
+</body>
+</html>
+
