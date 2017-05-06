@@ -12,12 +12,10 @@ intro: Hello, World!
 
 Here is $a + b$ Problem.
 
-//------------------------------------------------------------------------------------------------------------------------//
-
-<pre><code class="c++">#include &lt;cstdio>
+{% highlight c %}
 int main(){
 	scanf("%d%d", &a, &b);
 	printf("%d", a + b);
 	return 0;
 }
-</code></pre>
+{% endhighlight %}
