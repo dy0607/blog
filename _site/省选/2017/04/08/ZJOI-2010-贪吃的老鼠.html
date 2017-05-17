@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dy's Home</title>
+
+    <!-- Bootstrap CSS -->
+<link href="http://localhost:4000//css/bootstrap.min.css" rel='stylesheet' type='text/css'/>
+<link href="http://localhost:4000//css/simple-sidebar.css" rel='stylesheet' type='text/css'/>
+<link href="http://localhost:4000//css/font-awesome.min.css" rel='stylesheet' type='text/css'/>
+<link href="http://localhost:4000//css/global.css" rel='stylesheet' type='text/css'/>
+<link href="http://localhost:4000//css/footer.css" rel='stylesheet' type='text/css'/>
+
+    
+    <!--MathJex-->
+    <script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+  		tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+	});
+	</script>
+	<script type="text/javascript" async
+  		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML">
+	</script>
+	
+	<link href="http://localhost:4000//css/post.css" rel='stylesheet' type="text/css"/>
+    <link href="http://localhost:4000//css/md-post-header-collapse.css" rel='stylesheet' type="text/css"/>
+    <link href="http://localhost:4000//css/toc.css" rel='stylesheet' type="text/css"/>
+
+	<!--link rel="stylesheet" href="http://localhost:4000//styles/pygment.css" type="text/css"/-->
+
+</head>
+<body>
+	
+    <div id="wrapper" >
+		
+	    
+<!-- Toggle Button -->
+ <a href="#menu-toggle" class="btn btn-outline-link hidden-xs-down" id="menu-toggle">
+     <i class="fa fa-bars" aria-hidden="true"></i>
+ </a>
+
+ <!-- Sidebar for desktop -->
+ <div id="sidebar-wrapper" class="hidden-xs-down">
+    <nav class="nav nav-pills flex-sm-row p-3 justify-content-center">
+        <a class="flex-sm-fill text-sm-center nav-link active" href="#sidebar-home-content" data-toggle="tab" role="tab" id="home">Home</a>
+        <a class="flex-sm-fill text-sm-center nav-link hidden-xl-down" href="#sidebar-toc-content" data-toggle="tab" role="tab" id="toc">Toc</a>
+    </nav>
+    <div class="tab-content" id="tab-content">
+        <div class="tab-pane text-sm-center active" id="sidebar-home-content">
+            <img class="site-author-image m-2" itemprop="image" src="https://avatars0.githubusercontent.com/u/20853317?v=3&s=460">
+            <div class="text-warning">dy0607</div>
+            <ul class="sidebar-nav">
+    <li title="主页">
+        <a href="http://localhost:4000//index.html">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            Home  
+        </a>
+    </li>
+    <li title="博文">
+        <a href="http://localhost:4000//index.html#archives">
+            <i class="fa fa-file-archive-o" aria-hidden="true"></i>
+            Archives 
+            <span class="badge badge-primary">10</span>
+        </a>
+    </li>
+    <li title="分类">
+        <a href="http://localhost:4000//categories.html">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            Categories
+            <span class="badge badge-primary">4</span>
+        </a>
+    </li>
+    <li title="关于">
+        <a href="http://localhost:4000//about.html" >
+            <i class="fa fa-user" aria-hidden="true"></i>
+            About
+        </a>
+    </li>
+    <li title="搜索">
+    	<a id="cb-search-btn" style="cursor: pointer; color: gray;">
+			<i class="fa fa-search" aria-hidden="true"></i>
+			   Search
+		</a>
+	<li>
+</ul>
+
+         	
+        </div>
+        <div class="tab-pane fade text-sm-left" id="sidebar-toc-content">
+        </div>
+    </div>
+    
+</div>
+
+<!-- Navbar for xsmall screen  -->
+<div class="hidden-sm-up">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Dy's Home</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="sidebar-nav">
+    <li title="主页">
+        <a href="http://localhost:4000//index.html">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            Home  
+        </a>
+    </li>
+    <li title="博文">
+        <a href="http://localhost:4000//index.html#archives">
+            <i class="fa fa-file-archive-o" aria-hidden="true"></i>
+            Archives 
+            <span class="badge badge-primary">10</span>
+        </a>
+    </li>
+    <li title="分类">
+        <a href="http://localhost:4000//categories.html">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            Categories
+            <span class="badge badge-primary">4</span>
+        </a>
+    </li>
+    <li title="关于">
+        <a href="http://localhost:4000//about.html" >
+            <i class="fa fa-user" aria-hidden="true"></i>
+            About
+        </a>
+    </li>
+    <li title="搜索">
+    	<a id="cb-search-btn" style="cursor: pointer; color: gray;">
+			<i class="fa fa-search" aria-hidden="true"></i>
+			   Search
+		</a>
+	<li>
+</ul>
+
+        </div>
+    </nav>
+</div>
+ 
+	   <!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="http://localhost:4000//js/jquery-3.1.1.min.js"></script>
+<script src="http://localhost:4000//js/tether.min.js"></script>
+<script src="http://localhost:4000//js/bootstrap.min.js"></script>
+
+
+	   <!-- Page Content -->
+<div id="page-content-wrapper">
+    <div class="container-fluid" id="post-content">
+        <div class="row">		   
+	   		<div class="pagewidth">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <h1 class="text-danger">
+                        ZJOI 2010 贪吃的老鼠 网络流
+                    </h1></p>
+                    <B>Date: <span class="badge badge-primary">2017-04-08</span></B></p>
+                    <B>分类:  </B>
+                    
+    					<a href="http://localhost:4000//categories.html">
+						<span class="badge badge-primary">省选</span></a>&nbsp;
+    				
+    				<B>|&nbsp;</B>
+                    <B>标签:  </B>
+                    
+    					<a href="http://localhost:4000//categories.html">
+						<span class="badge badge-primary">网络流</span></a>&nbsp;
+    				
+    				</p>
+                    </p>
+                </div>
+                <h2 id="description">Description</h2>
+
+<p>奶酪店里最近出现了$m$只老鼠！它们的目标就是把生产出来的所有奶酪都吃掉。奶酪店中一天会生产$n$块奶酪，其中第$i$块的大小为$p_i$，会在第$r_i$秒被生产出来，并且必须在第$d_j$秒之前将它吃掉。第$j$只老鼠吃奶酪的速度为$s_j$，因此如果它单独吃完第i快奶酪所需的时间为$p_i * s_j ^ {-1}$。老鼠们吃奶酪的习惯很独特，具体来说：</p>
+
+<p>(1) 在任一时刻，一只老鼠最多可以吃一块奶酪；</p>
+
+<p>(2) 在任一时刻，一块奶酪最多被一只老鼠吃。</p>
+
+<p>由于奶酪的保质期常常很短，为了将它们全部吃掉，老鼠们需要使用一种神奇的魔法来延长奶酪的保质期。将奶酪的保质期延长$T$秒是指所有的奶酪的$d_i$变成$d_i+T$。同时，使用魔法的代价很高，因此老鼠们希望找到最小的T使得可以吃掉所有的奶酪。</p>
+
+<h2 id="input">Input</h2>
+
+<p>输入文件的第一行包含一个整数$K$，表示输入文件中数据的组数。</p>
+
+<p>每组数据的第一行包含两个整数$n$和$m$，分别表示奶酪和老鼠的数量。接下来的$n$行每行包含三个整数$p_i,r_i,d_i$。最后$m$行每行包含一个整数，表示$s_j$。$p_i,r_i,d_i,s_j$的含义如上文所述。</p>
+
+<h2 id="output">Output</h2>
+
+<p>包含K 行，每行包含一个实数，表示你找到的最小的$T$。你的答案和标准答案的绝对误差不应超过$10^{-4}$。</p>
+
+<h2 id="solution">Solution</h2>
+
+<p>网络流好题！然而做法很巧(e)妙(xin)。</p>
+
+<p>很容易想到二分答案(然并卵)，然后用网络流判定方案是否可行，但是两个限制条件使建模难度不小。假如没有第二个限制条件，可以考虑这样一种建模：</p>
+
+<p>首先考虑由源点S向所有奶酪连流量为$p[i]$的边。然后以奶酪出现和变质的时间点为界，可划分成若干个时间段，设第i个时间段的长度为$dur[i]$，将每个老鼠按时间段拆成若干个点，向汇点T连流量为 $s[j] * dur[i]$。最后奶酪向其对应时间段内的老鼠连边 $s[j] * dur[i]$。</p>
+
+<p>这样的连边显然无法保证某个奶酪在任意时间点不会被多个老鼠吃。我们考虑先将老鼠按s从大到小排序，再令$s[i] = s[i] - s[i+1]$，而奶酪向老鼠的连边流量仍为 $s[i] * dur[i]$。这样我们考虑某一个时间段，若该奶酪向老鼠j连边的流量与s[j]之比为t[j]，令t[j]随j递增(主要是为了理解方便)，该奶酪出流量:</p>
+
+<script type="math/tex; mode=display">F[i] = \sum_{j = 1} ^ {m-1} ((s[j] - s[j+1]) * t[j]) + s[m] * t[m] 
+		   = \sum_{j = 2} ^ {m}(s[j] * (t[j] - t[j-1])) + s[1] * t[1]</script>
+
+<p>我们发现，此时该奶酪被老鼠吃的总时间就是 $t[m]$，由于流量限制我们可以保证$t[m] &lt; dur[i]$，且第$j(j &gt; 1)$只老鼠吃奶酪的实际时间是$t[j] - t[j-1]$，因而可以考虑到所有情况。此时老鼠向汇的连边流量也需要调整，第$j$只老鼠的第$i$个时间段与汇的流量上限为$s[j] * dur[i] * j$，这是因为当某只老鼠被选择时，所有编号在它后面的老鼠的节点也需要增加相应的流量。</p>
+
+<h2 id="source">Source</h2>
+
+<pre><code class="c++">#include &lt;cstdio&gt;
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+#include &lt;cstring&gt;
+#include &lt;queue&gt;
+#include &lt;vector&gt;
+
+#define For(i,j,k) for(int i = j;i &lt;= ((int)k);i++)
+#define Forr(i,j,k) for(int i = j;i &gt;= (k);i--)
+#define Set(i,j) memset(i, j, sizeof(i))
+#define pb push_back
+
+using namespace std;
+
+const double eps = 1e-9;
+const int N = 2010, M = 200010;
+
+inline int dcmp(double x){
+	return x &lt; -eps ? -1 : (x &gt; eps ? 1 : 0);
+}
+
+struct Edge{
+	int to;
+	double cap, flow;
+};
+
+struct Dinic{
+	Edge E[M];
+	vector&lt;int&gt; G[N];
+	int n, e, S, T;
+	int dis[N], cur[N], vis[N];
+
+	void init(int _n){
+		n = _n;
+		For(i,0,n) G[i].clear();
+		e = -1;	
+	}
+
+	void Add(int x, int y, double w){
+		G[x].pb(++e), E[e] = (Edge){y, w, 0};
+		G[y].pb(++e), E[e] = (Edge){x, 0, 0};
+	}
+
+	bool BFS(){
+		queue&lt;int&gt; q;
+		Set(vis, false);
+		q.push(S), vis[S] = true;
+		while(!q.empty()){
+			int h = q.front(); q.pop();
+			For(i,0,G[h].size() - 1){
+				Edge d = E[G[h][i]];
+				if(vis[d.to] || dcmp(d.cap - d.flow) &lt;= 0) continue;
+				dis[d.to] = dis[h] + 1, vis[d.to] = true;
+				q.push(d.to);
+			}
+		}
+		return vis[T];
+	}
+
+	double DFS(int h, double f){
+		if(h == T) return f;
+		double t = 0, sumf = 0;
+		for(int &amp;i = cur[h];i &lt; (int)G[h].size();++i){
+			Edge &amp;d = E[G[h][i]];
+			if(dcmp(f) &lt;= 0) break;
+			if(dis[d.to] == dis[h] + 1 
+			&amp;&amp; dcmp(t = DFS(d.to, min(f, d.cap - d.flow))) &gt; 0){
+				f -= t;
+				sumf += t;
+				d.flow += t;
+				E[G[h][i] ^ 1].flow -= t;
+			}
+		}
+		return sumf;
+	}
+
+	double Maxflow(int s, int t){
+		S = s, T = t;
+		double ret = 0;
+		while(BFS()){
+			Set(cur, 0);
+			ret += DFS(S, 1e9);
+		}
+		return ret;
+	}
+
+}F;
+
+int p[N], l[N], r[N], s[N];
+int TEST, n, m;
+
+double Time[N], sump;
+
+bool check(double v){
+	For(i,1,n) Time[i] = l[i], Time[i + n] = r[i] + v;
+	sort(Time + 1, Time + 2 * n + 1);
+	int S = 0, T = n + 2 * n * m + 1;
+	F.init(T);
+	For(i,1,n) F.Add(S, i, p[i]);
+	For(i,2,n / 2){
+		double dur = Time[i] - Time[i-1];
+		if(!dcmp(dur)) continue;
+		For(j,1,m){
+			double h = n + m * (i - 1) + j;
+			F.Add(h, T, j * s[j] * dur);
+			For(k,1,n)
+				if(dcmp(Time[i-1] - l[k]) &gt;= 0 &amp;&amp; 
+				   dcmp(Time[i] - r[k] - v) &lt;= 0) 
+					F.Add(k, h, s[j] * dur);
+		}
+	}
+	return dcmp(F.Maxflow(S, T) - sump) &gt;= 0;
+}
+
+int main(){
+	scanf("%d", &amp;TEST);
+	while(TEST--){
+		scanf("%d%d", &amp;n, &amp;m);
+		sump = 0;
+		For(i,1,n) 
+		    scanf("%d%d%d", &amp;p[i], &amp;l[i], &amp;r[i]), sump += p[i];
+		For(i,1,m) scanf("%d", &amp;s[i]);
+		sort(s + 1, s + m + 1, greater&lt;int&gt;());
+		For(i,1,m-1) s[i] -= s[i+1];
+		double L = 0, R = 3e6;
+		while(R - L &gt; eps){
+			double Mid = (L + R) / 2;
+			if(check(Mid)) R = Mid;
+			else L = Mid;
+		}
+		printf("%.6lf\n", L);
+	}
+	return 0;
+}
+</code></pre>
+
+                </p></p>
+
+                <!-- don't delete this div as this is header collapse end identified  -->
+                <div id="content-end"></div>
+                <div></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<!-- /#page-content-wrapper -->
+
+	   <div class="row">
+    <div class="col-md-12">
+        <div id="disqus_thread"></div>
+        <script>
+          var disqus_config = function () {
+            this.page.url = 'https://dy0607.github.io';  
+            this.page.identifier = 'https://dy0607.github.io/dy0607.github.io/index.html';
+          };
+          
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://dy0607.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+	   <footer class="mt-5 pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <strong>Credits</strong>
+        <table class="table table-sm">
+          <tr>
+            <td>Theme by:</td>
+            <td>Szhshp</td>
+          </tr>
+          <tr>
+            <td>Engine:</td>
+            <td>Ruby x Jekyll</td>
+          </tr>
+          </table>
+	  <p class="text-muted">Copyright &copy; dy0607 2017</p>
+        </div>
+
+        <div class="col-md-6">
+          <strong>Friend Links</strong>
+          <table class="table table-sm">
+            <tr>
+              <td><a href="http://sunshine-cfbsl.com"> Sunshine_cfbsl</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://blog.csdn.net/frods"> SAK</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://blog.csdn.net/miaomiao_ymxl"> MiaoMiao</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://blog.csdn.net/henyouyisiba123"> YYC</a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>  
+   
+    <!--search engine-->
+    <link rel="stylesheet" href="http://localhost:4000//search/css/cb-search.css">
+
+	<div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right: 0px;
+		  opacity: 0.95; background-color: #000; z-index: 9999; display: none;">
+		<input type="text" class="form-control cb-search-content" id="cb-search-content" 
+			style="position: fixed; top: 60px; " placeholder="Search for title or tag..." >
+
+		<div style="position: fixed; top: 30px; right: 260px;">
+		    <img src="/search/img/cb-close.png"  id="cb-close-btn"/>
+		</div>
+	</div>
+
+	
+	<script src="http://localhost:4000//search/js/bootstrap3-typeahead.min.js"></script>
+	<script src="http://localhost:4000//search/js/cb-search.js"></script>
+
+  </footer>
+  
+<!--player-->
+<!--
+<embed src="http://www.xiami.com/widget/0_2096838/singlePlayer.swf" 
+	type="application/x-shockwave-flash" width="252" height="33" wmode="transparent" style="position: fixed; bottom: 0; left: 30px; opacity: 0.5;"></embed>
+-->
+  
+
+
+    </div>
+    
+   <link rel="stylesheet" href="http://localhost:4000//styles/atelier-lakeside-dark.css"/>
+	<script src="http://localhost:4000//js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	
+   <!-- Old Highlighter : do not remove it or there may be a compile error in post.js -->
+   <script src="http://localhost:4000//js/shCore.js" type='text/javascript'></script>
+
+   <!-- Header collapse -->
+   <script src="http://localhost:4000//js/md-post-header-collapse.js" type="text/javascript"></script>
+
+   <script src="http://localhost:4000//js/sidebar.js" type="text/javascript"></script>
+   <script src="http://localhost:4000//js/post.js" type="text/javascript"></script>
+   <script src="http://localhost:4000//js/toc.js" type="text/javascript"></script>
+
+
+</body>
+</html>
+

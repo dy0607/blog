@@ -29,6 +29,5 @@ google_api_key:
 gems: [jekyll-paginate]
 
 markdown: kramdown
-highlighter: pygments
 
 # toc_levels: 1..2
