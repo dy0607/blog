@@ -29,5 +29,5 @@ google_api_key:
 gems: [jekyll-paginate]
 
 markdown: kramdown
-
+encoding: UTF-8
 # toc_levels: 1..2
