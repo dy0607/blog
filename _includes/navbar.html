@@ -1,9 +1,8 @@
  
 <!-- Toggle Button -->
- <a href="#menu-toggle" class="btn btn-outline-link hidden-xs-down" id="menu-toggle">
+ <a href="#menu-toggle" class="btn btn-group-vertical btn-sm toggled" id="menu-toggle">
      <i class="fa fa-bars" aria-hidden="true"></i>
  </a>
-
  <!-- Sidebar for desktop -->
  <div id="sidebar-wrapper" class="hidden-xs-down">
     <nav class="nav nav-pills flex-sm-row p-3 justify-content-center">
@@ -11,9 +10,10 @@
         <a class="flex-sm-fill text-sm-center nav-link hidden-xl-down" href="#sidebar-toc-content" data-toggle="tab" role="tab" id="toc">Toc</a>
     </nav>
     <div class="tab-content" id="tab-content">
-        <div class="tab-pane text-sm-center active" id="sidebar-home-content">
+        <div class="tab-pane text-sm-center active" id="sidebar-home-content" >
             <img class="site-author-image m-2" itemprop="image" src="https://avatars0.githubusercontent.com/u/20853317?v=3&s=460">
-            <div class="text-warning">dy0607</div>
+            <p class="text-warning" font-family="FontAwesome">dy0607</p>
+			<br>
             {% include nav-links.html %}
          	
         </div>
