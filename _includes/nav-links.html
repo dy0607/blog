@@ -1,5 +1,16 @@
+<style>
+	a.navbartext{
+		cursor: pointer; 
+		color: gray;
+	}
+
+	a.navbartext:hover{
+		color: #000000;
+	}
+</style>
+
 <ul class="sidebar-nav">
-    <li data-toggle="tooltip" data-placement="left" data-original-title="主页">
+    <li title="主页">
         <a href="{{site.url}}{{site.baseurl}}/index.html">
             <i class="fa fa-home" aria-hidden="true"></i>
             Home
@@ -9,14 +20,14 @@
         <a href="{{site.url}}{{site.baseurl}}/index.html#archives">
             <i class="fa fa-file-archive-o" aria-hidden="true"></i>
             Archives 
-            <span class="badge badge-primary">{{ site.posts.size}}</span>
-        </a>
+             <span class="text-warning pull-right">{{ site.posts.size}}</span>
+		</a>
     </li>
     <li title="分类">
         <a href="{{site.url}}{{site.baseurl}}/categories.html">
             <i class="fa fa-tags" aria-hidden="true"></i>
             Categories
-            <span class="badge badge-primary">{{ site.categories.size}}</span>
+            <span class="text-warning pull-right">{{ site.categories.size}}</span>
         </a>
     </li>
     <li title="关于">
@@ -26,9 +37,9 @@
         </a>
     </li>
     <li title="搜索">
-    	<a id="cb-search-btn" style="cursor: pointer; color: gray;">
+    	<a class="navbartext" href="#search" id="cb-search-btn" style="">
 			<i class="fa fa-search" aria-hidden="true"></i>
-			   Search
+			Search
 		</a>
 	<li>
 </ul>
