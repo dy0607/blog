@@ -2,7 +2,7 @@ paginate: 5
 paginate_path: "page:num"
 
 # Site settings
-title: Dy's Home
+title: Dy0607's Home
 email: 1556528051@qq.com
 description: > # this means to ignore newlines until "baseurl:"
     Keep on coding!
@@ -11,7 +11,7 @@ baseurl: "/" # the subpath of your site, e.g. /blog/
 
 # User setting
 owner: Dy
-email: 1556528051@qq.com
+email: dy0607@foxmail.com
 facebook_username:
 twitter_username:
 github_username: dy0607
