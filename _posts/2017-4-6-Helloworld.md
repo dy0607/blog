@@ -13,6 +13,8 @@ intro: Hello, World!
 Here is $a + b$ Problem.
 
 {% highlight c %}
+#include <cstdio>
+
 int main(){
 	scanf("%d%d", &a, &b);
 	printf("%d", a + b);
