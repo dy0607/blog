@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Monkey ans Tree
+title: Monkey and Tree
 intro: 有一天， Monkey得到了一棵有个$N$节点的树。树上的边用一个三元组$(u_i,v_i,l_i)$来表示，意思是$u_i$和$v_i$之间有一条边长为$l_i$的边。于是可爱的Monkey和她的妹妹Little Monkey在树上开心地玩耍。她们要一起玩游戏。因为Monkey特别喜欢跑步，而且跑得特别快，所以她们两人决定在树上跑步。可起点和终点怎么决定呢？Monkey决定从$M$个点对$(a_i,b_i)$，中选出两个点对$(a_i,b_i)$ 和 $(a_j,b_j)$。然
 tag: 点分治
 category: TUOJ
