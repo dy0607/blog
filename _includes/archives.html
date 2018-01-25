@@ -97,10 +97,10 @@
 						{% if page == paginator.page %}
 						  <B><span class="badge badge-danger">{{ page }}</span></B>&nbsp;&nbsp;&nbsp;
 						{% elsif page == 1 %}
-						  <a href="{{site.url}}{{site.baseurl}}">
+						  <a href="{{site.url}}{{site.baseurl}}#archives">
 						  <span class="badge badge-primary">{{ page }}</span></a>&nbsp;&nbsp;&nbsp;
 						{% else %}
-						  <a href="{{site.url}}{{site.baseurl}}/page{{ page }}">
+						  <a href="{{site.url}}{{site.baseurl}}/page{{ page }}#archives">
 						  <span class="badge badge-primary">{{ page }}</span></a>&nbsp;&nbsp;&nbsp;
 						{% endif %}
 					  {% endfor %}

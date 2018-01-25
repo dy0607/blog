@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{{site.title}}</title>
+    <title>{{page.title}} | {{site.title}}</title>
 
     {% include global-css.html %}
     
@@ -13,10 +13,10 @@
   		tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 	});
 	</script>
-	<script type="text/javascript" async
-  		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML">
+	<script type="text/javascript"
+		src="{{site.url}}{{site.baseurl}}/js/MathJax/MathJax.js?config=TeX-MML-AM_CHTML">
 	</script>
-	
+
 	<link href="{{site.url}}{{site.baseurl}}/css/post.css" rel='stylesheet' type="text/css"/>
     <link href="{{site.url}}{{site.baseurl}}/css/md-post-header-collapse.css" rel='stylesheet' type="text/css"/>
     <link href="{{site.url}}{{site.baseurl}}/css/toc.css" rel='stylesheet' type="text/css"/>
