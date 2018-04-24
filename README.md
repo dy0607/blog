@@ -72,4 +72,4 @@ Navbar
 Footer
 ---
 
-/_includes/footer.html 是页面底部的一些东西，包括友链等等．．．
+/_includes/footer.html 是页面底部的一些东西
