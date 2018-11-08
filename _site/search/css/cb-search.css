@@ -1,0 +1,67 @@
+@media screen and (min-width: 768px) {
+	.dropdown-menu {
+		position: relative;
+		float: none;
+		font-size: 16px;
+		background-color: #333;
+		padding-left: 35px;
+		line-height: 36px;
+		width: 70%;
+		margin: 0 15%;
+	}
+
+	.cb-search-tool ul{
+		 width: 55%;
+		 white-space: nowrap;
+		 color: black;
+		 overflow: hidden;
+		 text-overflow: ellipsis;
+	 }
+
+
+	.cb-search-content {
+		width: 55%;
+		margin: 0 15%;
+		padding-left: 30px;
+		position: absolute;
+		top: 13%;
+		left: auto;
+		right: auto;
+		font-size: 18px;
+		height: 45px;
+		background-color: #aaa;
+		color: black;
+		opacity: 100%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.dropdown-menu {
+		position:relative;
+		float: none;
+		font-size: 16px;
+		width: 96%;
+		margin: 0 2%;
+	}
+
+	.cb-search-tool ul{
+		width: 96% ;
+		white-space:nowrap; 
+		overflow:hidden; 
+		text-overflow: ellipsis;
+	}
+
+	.cb-search-content {
+		width: 96%;
+		margin: 0 2%;
+		position: absolute;
+		top: 10%;
+		left: auto;
+		right: auto;
+		font-size: 16px;
+		height: 50px;
+		background-color: #eee;
+		color: black;
+		opacity: 1.0;
+	}
+}
